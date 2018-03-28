@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerVitals : MonoBehaviour
 {
@@ -17,6 +18,16 @@ public class PlayerVitals : MonoBehaviour
     public int maxHunger;
     public int hungerFallRate;
 
+    public Slider staminaSlider;
+    public int maxStamina;
+    private int staminaFallRate;
+    public int staminaFallMult;
+    private int staminaRegainRate;
+    public int staminaRegainMult;
+
+    private CharacterController charController;
+    private FirstPersonController playerController;
+
     void Start()
     {
         healthSlider.maxValue = maxHealth;
@@ -27,6 +38,15 @@ public class PlayerVitals : MonoBehaviour
 
         hungerSlider.maxValue = maxHunger;
         hungerSlider.value = maxHunger;
+
+        staminaSlider.maxValue = maxStamina;
+        staminaSlider.value = maxStamina;
+
+        staminaFallRate = 1;
+        staminaRegainRate = 1;
+
+        charController = GetComponent<CharacterController>();
+        playerController = GetComponent<FirstPersonController>();
     }
 
     void Update()
@@ -92,6 +112,38 @@ public class PlayerVitals : MonoBehaviour
             thirstSlider.value = maxThirst;
         }
 
+        // STAMINA CONTROL SECTION
+
+        // If player is moving and sprinting, lose some stamina
+        if (charController.velocity.magnitude > 0 && Input.GetKey(KeyCode.LeftShift))
+        {
+            staminaSlider.value -= Time.deltaTime / staminaFallRate * staminaFallMult;
+        }
+
+        // if player is moving but not sprinting, regain some stamina
+        else
+        {
+            staminaSlider.value += Time.deltaTime / staminaRegainRate * staminaRegainMult;
+        }
+
+        // This prevents stamina from going over 100%
+        if (staminaSlider.value >= maxStamina)
+        {
+            staminaSlider.value = maxStamina;
+        }
+
+        // This forces player to walk when out of stamina, and also prevents stamina from going into negatives
+        else if (staminaSlider.value <= 0)
+        {
+            staminaSlider.value = 0;
+            playerController.m_RunSpeed = playerController.m_WalkSpeed;
+        }
+
+        // Player is able to run again when stamina is greater than zero
+        else if (staminaSlider.value >= 0)
+        {
+            playerController.m_RunSpeed = playerController.m_RunSpeedNorm;
+        }
     }
 
     void CharacterDeath()
