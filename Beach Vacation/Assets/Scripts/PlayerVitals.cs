@@ -25,6 +25,14 @@ public class PlayerVitals : MonoBehaviour
     private int staminaRegainRate;
     public int staminaRegainMult;
 
+    [Header("Temperature Settings")]
+    public float freezingTemp;
+    public float currentTemp;
+    public float normalTemp;
+    public float heatTemp;
+    public Text tempNumber;
+    public Image tempBG;
+
     private CharacterController charController;
     private FirstPersonController playerController;
 
@@ -49,8 +57,34 @@ public class PlayerVitals : MonoBehaviour
         playerController = GetComponent<FirstPersonController>();
     }
 
+    void UpdateTemp()
+    {
+        tempNumber.text = currentTemp.ToString("00.0");
+    }
+
     void Update()
     {
+
+        //Temperature Section
+        if (currentTemp <= freezingTemp)
+        {
+            tempBG.color = Color.blue;
+            UpdateTemp();
+        }
+
+        else if (currentTemp >= heatTemp - 0.1)
+        {
+            tempBG.color = Color.red;
+            UpdateTemp();
+        }
+
+        else
+        {
+            tempBG.color = Color.green;
+            UpdateTemp();
+        }
+
+
         // Health Controller
 
         // Makes health fall fastest. Health and Thirst bars are at zero.
@@ -59,7 +93,7 @@ public class PlayerVitals : MonoBehaviour
             healthSlider.value -= Time.deltaTime / healthFallRate * 2;
         }
 
-        else if (hungerSlider.value <= 0 || thirstSlider.value <= 0)
+        else if (hungerSlider.value <= 0 || thirstSlider.value <= 0 || currentTemp <= freezingTemp || currentTemp >= heatTemp)
         {
             healthSlider.value -= Time.deltaTime / healthFallRate;
         }
@@ -118,12 +152,23 @@ public class PlayerVitals : MonoBehaviour
         if (charController.velocity.magnitude > 0 && Input.GetKey(KeyCode.LeftShift))
         {
             staminaSlider.value -= Time.deltaTime / staminaFallRate * staminaFallMult;
+
+            // and also gain some heat ;)
+            if (staminaSlider.value > 0)
+            {
+                currentTemp += Time.deltaTime / 5;
+            }
         }
 
         // if player is moving but not sprinting, regain some stamina
         else
         {
             staminaSlider.value += Time.deltaTime / staminaRegainRate * staminaRegainMult;
+
+            if (currentTemp >= normalTemp)
+            {
+                currentTemp -= Time.deltaTime / 10;
+            }
         }
 
         // This prevents stamina from going over 100%
