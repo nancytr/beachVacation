@@ -19,11 +19,23 @@ public class PlayerVitals : MonoBehaviour
     public int hungerFallRate;
 
     public Slider staminaSlider;
-    public int maxStamina;
+    public int normMaxStamina;
+    public float fatMaxStamina;
     private int staminaFallRate;
     public int staminaFallMult;
     private int staminaRegainRate;
     public int staminaRegainMult;
+
+    
+    
+    public Slider fatigueSlider;
+    public int maxFatigue;
+    public int fatigueFallRate;
+
+    public bool fatStage1 = true;
+    public bool fatStage2 = true;
+    public bool fatStage3 = true;
+    
 
     [Header("Temperature Settings")]
     public float freezingTemp;
@@ -38,6 +50,9 @@ public class PlayerVitals : MonoBehaviour
 
     void Start()
     {
+        fatigueSlider.maxValue = maxFatigue;
+        fatigueSlider.value = maxFatigue;
+
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
 
@@ -47,8 +62,8 @@ public class PlayerVitals : MonoBehaviour
         hungerSlider.maxValue = maxHunger;
         hungerSlider.value = maxHunger;
 
-        staminaSlider.maxValue = maxStamina;
-        staminaSlider.value = maxStamina;
+        staminaSlider.maxValue = normMaxStamina;
+        staminaSlider.value = normMaxStamina;
 
         staminaFallRate = 1;
         staminaRegainRate = 1;
@@ -64,6 +79,43 @@ public class PlayerVitals : MonoBehaviour
 
     void Update()
     {
+
+        // Fatigue Section
+        if (fatigueSlider.value <= 60 && fatStage1)
+        {
+            fatMaxStamina = 80;
+            staminaSlider.value = fatMaxStamina;
+            fatStage1 = false;
+        }
+
+        else if (fatigueSlider.value <= 40 && fatStage2)
+        {
+            fatMaxStamina = 60;
+            staminaSlider.value = fatMaxStamina;
+            fatStage2 = false;
+        }
+
+        else if (fatigueSlider.value <= 20 && fatStage3)
+        {
+            fatMaxStamina = 20;
+            staminaSlider.value = fatMaxStamina;
+            fatStage3 = false;
+        }
+
+        if (fatigueSlider.value >= 0)
+        {
+            fatigueSlider.value -= Time.deltaTime * fatigueFallRate;
+        }
+
+        else if (fatigueSlider.value <= 0)
+        {
+            fatigueSlider.value = 0;
+        }
+
+        else if (fatigueSlider.value >= maxFatigue)
+        {
+            fatigueSlider.value = maxFatigue;
+        }
 
         //Temperature Section
         if (currentTemp <= freezingTemp)
@@ -172,9 +224,9 @@ public class PlayerVitals : MonoBehaviour
         }
 
         // This prevents stamina from going over 100%
-        if (staminaSlider.value >= maxStamina)
+        if (staminaSlider.value >= fatMaxStamina)
         {
-            staminaSlider.value = maxStamina;
+            staminaSlider.value = fatMaxStamina;
         }
 
         // This forces player to walk when out of stamina, and also prevents stamina from going into negatives
