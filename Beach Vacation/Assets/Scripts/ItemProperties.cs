@@ -14,6 +14,7 @@ public class ItemProperties : MonoBehaviour {
 
     [SerializeField] private float value;
     [SerializeField] private SleepController sleepController;
+    [SerializeField] private TimeController timeController;
 
     void Start()
     {
@@ -45,7 +46,22 @@ public class ItemProperties : MonoBehaviour {
 
         else if (sleepingBag)
         {
-            sleepController.EnableSleepUI();
+            if (timeController.isNight)
+            {
+                sleepController.EnableSleepUI();
+            }
+            else
+            {
+                sleepController.CantSleepUI.SetActive(true);
+                StartCoroutine(byeUI());
+            }
         }
     }
+
+    IEnumerator byeUI()
+     {
+        yield return new WaitForSeconds(3);
+        sleepController.CantSleepUI.SetActive(false);
+     }
+    
 }

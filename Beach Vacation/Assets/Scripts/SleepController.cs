@@ -8,10 +8,12 @@ public class SleepController : MonoBehaviour
     [SerializeField] private GameObject sleepUI;
     [SerializeField] private Slider sleepSlider;
     [SerializeField] private Text sleepNumber;
+    [SerializeField] public GameObject CantSleepUI;
 
     [SerializeField] private float hourlyRegen;
     // DISABLE MANAGER
     [SerializeField] private DisableManager disableManager;
+    [SerializeField] private DaysController daysController;
 
 
     void Start()
@@ -42,5 +44,6 @@ public class SleepController : MonoBehaviour
         sleepSlider.value = 1;
         disableManager.EnablePlayer();
         sleepUI.SetActive(false);
+        daysController.NewDay();
     }
 }

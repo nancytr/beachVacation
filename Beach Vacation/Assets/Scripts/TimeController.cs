@@ -6,14 +6,17 @@ public class TimeController : MonoBehaviour {
 
     [SerializeField] private Light sun;
     [SerializeField] private  float secondsInFullDay = 120f;
+    [SerializeField] private DaysController daysController;
 
-    [Range(0, 1)]
-    [SerializeField] private float currentTimeOfDay = 0;
+    [Range(0, 1)] [SerializeField] public float currentTimeOfDay = 0;
     private float timeMultiplier = 1f;
     private float sunInitialIntensity;
+    public bool isNight;
+    public bool isNewDay = false;
 
     void Start()
     {
+
         sunInitialIntensity = sun.intensity;
     }
 
@@ -23,6 +26,7 @@ public class TimeController : MonoBehaviour {
 
         currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
 
+        // When day ends, restart day
         if(currentTimeOfDay >= 1)
         {
             currentTimeOfDay = 0;
@@ -38,6 +42,7 @@ public class TimeController : MonoBehaviour {
         if (currentTimeOfDay <= 0.23f || currentTimeOfDay >= 0.75f)
         {
             intensityMultiplier = 0;
+            isNight = true;
         }
 
         else if (currentTimeOfDay <= 0.25f)
@@ -50,6 +55,27 @@ public class TimeController : MonoBehaviour {
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
         }
 
+        else
+        {
+            isNight = false;
+        }
+
         sun.intensity = sunInitialIntensity * intensityMultiplier;
+
+        // Increments the new day. Runs once during update.
+        if (currentTimeOfDay >= 0.25f && currentTimeOfDay <= 0.30f)
+        {
+            
+            if (!isNewDay)
+            {
+                Debug.Log("new day!");
+                isNewDay = true;
+            }
+        }
+
+        if (currentTimeOfDay > 0.30f && currentTimeOfDay <= 0.50f)
+        {
+            isNewDay = false;
+        }
     }
 }

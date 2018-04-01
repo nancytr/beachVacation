@@ -29,8 +29,8 @@ public class PlayerVitals : MonoBehaviour
     
     
     public Slider fatigueSlider;
-    public int maxFatigue;
-    public int fatigueFallRate;
+    public float maxFatigue;
+    public float fatigueFallRate;
 
     public bool fatStage1 = true;
     public bool fatStage2 = true;

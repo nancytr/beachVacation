@@ -7,6 +7,9 @@ TagManager:
   - Consumable
   - DisableController
   - SleepController
+  - Canvas
+  - Panel
+  - Slots
   layers:
   - Default
   - TransparentFX
