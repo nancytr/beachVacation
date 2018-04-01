@@ -14,6 +14,7 @@ public class RaycastManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private Image crossHair;
     [SerializeField] private Text itemNameText;
+    [SerializeField] private PlayerVitals playerVitals;
 
     void Update()
     {
@@ -27,13 +28,16 @@ public class RaycastManager : MonoBehaviour
                 CrosshairActive();
                 raycastedObj = hit.collider.gameObject;
                 // update UI name
-                itemNameText.text = raycastedObj.GetComponent<ItemProperties>().itemName;
+                //itemNameText.text = raycastedObj.GetComponent<ItemProperties>().itemName;
+                ItemProperties properties = raycastedObj.GetComponent<ItemProperties>();
+                itemNameText.text = properties.itemName;
 
                 if (Input.GetMouseButtonDown(0))
                 {
                     //Object properties
-                    raycastedObj.GetComponent<ItemProperties>().Interaction();
-                    raycastedObj.SetActive(false);
+                    //raycastedObj.GetComponent<ItemProperties>().Interaction();
+                    //raycastedObj.SetActive(false);
+                    properties.Interaction(playerVitals);
                 }
             }
         }
