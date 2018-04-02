@@ -47,6 +47,8 @@ MonoBehaviour:
       attributeValue: 10
     - attributeName: Armor
       attributeValue: 10
+    - attributeName: 
+      attributeValue: 0
   - itemName: Iron Helmet
     itemID: 2
     itemDesc: 'This helmet is created out of iron.
