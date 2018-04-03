@@ -203,7 +203,8 @@ MonoBehaviour:
 
       + 10 Health'
     itemIcon: {fileID: 21300000, guid: 3ac254c0fa6214047a1df59938ba786f, type: 3}
-    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemModel: {fileID: 1259415391817420, guid: dfdf15c181914d341a979102eb4f6cbb,
+      type: 2}
     itemValue: 1
     itemType: 2
     itemWeight: 0

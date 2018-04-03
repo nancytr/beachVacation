@@ -10,6 +10,17 @@ TagManager:
   - Canvas
   - Panel
   - Slots
+  - Slot
+  - ItemIcon
+  - MainInventory
+  - DraggingItem
+  - Item
+  - Hotbar
+  - EquipmentSystem
+  - ResultSlot
+  - EventSystem
+  - Tooltip
+  - CraftSystem
   layers:
   - Default
   - TransparentFX
