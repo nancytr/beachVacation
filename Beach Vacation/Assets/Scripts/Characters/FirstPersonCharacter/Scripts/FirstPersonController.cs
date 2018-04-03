@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 using System.Collections;
 
 
- namespace UnityStandardAssets.Characters.FirstPerson
+namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (CharacterController))]
     [RequireComponent(typeof (AudioSource))]
@@ -69,7 +69,7 @@ using System.Collections;
         CharacterController characterController;
 
         // Use this for initialization
-        private void Start()
+        public void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
