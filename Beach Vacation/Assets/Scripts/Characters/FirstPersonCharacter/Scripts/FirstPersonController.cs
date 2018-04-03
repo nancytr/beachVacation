@@ -49,7 +49,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float movementspeed = 5.0f;
         public float mouseSensitivity = 2.0f;
         public float verticalAngleLimit = 60.0f;
-        public float jumpSpeed = 5f;
+        // public float jumpSpeed = 5f;
 
         float verticalRotation = 0;
 
@@ -64,9 +64,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         GameObject craftSystem;
         GameObject characterSystem;
 
-        Camera firstPersonCamera;
+        public Camera firstPersonCamera;
 
-        CharacterController characterController;
+        public CharacterController characterController;
 
         // Use this for initialization
         public void Start()
@@ -80,7 +80,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform , m_Camera.transform);
+			      m_MouseLook.Init(transform , m_Camera.transform);
 
             if (GameObject.FindGameObjectWithTag("Player") != null)
             {
@@ -101,30 +101,30 @@ namespace UnityStandardAssets.Characters.FirstPerson
            // INVENTORY STUFF
             if (!lockMovement())
             {
-            //Rotation
-            float rotationLeftRight = Input.GetAxis("Mouse X") * mouseSensitivity;
-            transform.Rotate(0, rotationLeftRight, 0);
+              //Rotation
+              float rotationLeftRight = Input.GetAxis("Mouse X") * mouseSensitivity;
+              transform.Rotate(0, rotationLeftRight, 0);
 
-            verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-            verticalRotation = Mathf.Clamp(verticalRotation, -verticalAngleLimit, verticalAngleLimit);
-            firstPersonCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+              verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+              verticalRotation = Mathf.Clamp(verticalRotation, -verticalAngleLimit, verticalAngleLimit);
+              firstPersonCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 
-            //Movement
-            float forwardSpeed = Input.GetAxis("Vertical") * movementspeed;
-            float sideSpeed = Input.GetAxis("Horizontal") * movementspeed;
+              //Movement
+              float forwardSpeed = Input.GetAxis("Vertical") * movementspeed;
+              float sideSpeed = Input.GetAxis("Horizontal") * movementspeed;
 
-            verticalVelocity += Physics.gravity.y * Time.deltaTime;
+              verticalVelocity += Physics.gravity.y * Time.deltaTime;
 
-            if (Input.GetButtonDown("Jump") && characterController.isGrounded)
-            {
-                verticalVelocity = jumpSpeed;
-            }
+              // if (Input.GetButtonDown("Jump") && characterController.isGrounded)
+              // {
+              //     verticalVelocity = jumpSpeed;
+              // }
 
-            Vector3 speed = new Vector3(sideSpeed, verticalVelocity, forwardSpeed);
+              Vector3 speed = new Vector3(sideSpeed, verticalVelocity, forwardSpeed);
 
-            speed = transform.rotation * speed;
+              speed = transform.rotation * speed;
 
-            characterController.Move(speed * Time.deltaTime);
+              characterController.Move(speed * Time.deltaTime);
             }
 
 
@@ -235,7 +235,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             // pick & play a random footstep sound from the array,
             // excluding sound at index 0
-            int n = Random.Range(1, m_FootstepSounds.Length);
+            int n = Random.Range(0, m_FootstepSounds.Length);
             m_AudioSource.clip = m_FootstepSounds[n];
             m_AudioSource.PlayOneShot(m_AudioSource.clip);
             // move picked sound to index 0 so it's not picked next time
