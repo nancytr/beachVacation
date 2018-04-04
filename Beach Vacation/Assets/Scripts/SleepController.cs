@@ -14,6 +14,7 @@ public class SleepController : MonoBehaviour
     // DISABLE MANAGER
     [SerializeField] private DisableManager disableManager;
     [SerializeField] private DaysController daysController;
+    [SerializeField] private TimeController timeController;
 
 
     void Start()
@@ -44,6 +45,7 @@ public class SleepController : MonoBehaviour
         sleepSlider.value = 1;
         disableManager.EnablePlayer();
         sleepUI.SetActive(false);
-        daysController.NewDay();
+        //daysController.NewDay();
+        timeController.currentTimeOfDay = 0.25f;
     }
 }

@@ -69,6 +69,7 @@ public class TimeController : MonoBehaviour {
             if (!isNewDay)
             {
                 Debug.Log("new day!");
+                daysController.NewDay();
                 isNewDay = true;
             }
         }

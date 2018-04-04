@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerInventory : MonoBehaviour
+
+
 {
+
+
+    [SerializeField] private DisableManager disableManager;
     public GameObject inventory;
     public GameObject characterSystem;
     public GameObject craftSystem;
@@ -306,12 +312,14 @@ public class PlayerInventory : MonoBehaviour
             if (!inventory.activeSelf)
             {
                 mainInventory.openInventory();
+                disableManager.DisablePlayer();
             }
             else
             {
                 if (toolTip != null)
                     toolTip.deactivateTooltip();
                 mainInventory.closeInventory();
+                disableManager.EnablePlayer();
             }
         }
 

@@ -8,6 +8,11 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
+
+
+    
+
+
     //Prefabs
     [SerializeField]
     private GameObject prefabCanvasWithPanel;
@@ -92,6 +97,8 @@ public class Inventory : MonoBehaviour
     public delegate void InventoryOpened();
     public static event InventoryOpened InventoryOpen;
     public static event InventoryOpened AllInventoriesClosed;
+
+    
 
     void Start()
     {
