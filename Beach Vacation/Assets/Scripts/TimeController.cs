@@ -14,6 +14,9 @@ public class TimeController : MonoBehaviour {
     public bool isNight;
     public bool isNewDay = false;
 
+    public float sunRise = 0.23f;
+    public float sunSet = 0.75f;
+
     void Start()
     {
 
@@ -39,18 +42,18 @@ public class TimeController : MonoBehaviour {
 
         float intensityMultiplier = 1;
 
-        if (currentTimeOfDay <= 0.23f || currentTimeOfDay >= 0.75f)
+        if (currentTimeOfDay <= sunRise || currentTimeOfDay >= sunSet)
         {
             intensityMultiplier = 0;
             isNight = true;
         }
 
-        else if (currentTimeOfDay <= 0.25f)
+        else if (currentTimeOfDay <= sunRise + 0.02f)
         {
             intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - 0.23f) * (1 / 0.02f));
         }
 
-        else if (currentTimeOfDay >= 0.73f)
+        else if (currentTimeOfDay >= sunSet - 0.02f)
         {
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
         }
@@ -63,7 +66,7 @@ public class TimeController : MonoBehaviour {
         sun.intensity = sunInitialIntensity * intensityMultiplier;
 
         // Increments the new day. Runs once during update.
-        if (currentTimeOfDay >= 0.25f && currentTimeOfDay <= 0.30f)
+        if (currentTimeOfDay >= sunRise + 0.02f && currentTimeOfDay <= (sunRise + 0.02f + 0.05f))
         {
             
             if (!isNewDay)
@@ -74,7 +77,7 @@ public class TimeController : MonoBehaviour {
             }
         }
 
-        if (currentTimeOfDay > 0.30f && currentTimeOfDay <= 0.50f)
+        if (currentTimeOfDay > 0.90f && currentTimeOfDay <= 1f)
         {
             isNewDay = false;
         }
