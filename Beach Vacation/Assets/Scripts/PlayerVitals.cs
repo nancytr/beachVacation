@@ -26,8 +26,8 @@ public class PlayerVitals : MonoBehaviour
     private int staminaRegainRate;
     public int staminaRegainMult;
 
-    
-    
+
+
     public Slider fatigueSlider;
     public float maxFatigue;
     public float fatigueFallRate;
@@ -35,7 +35,7 @@ public class PlayerVitals : MonoBehaviour
     public bool fatStage1 = true;
     public bool fatStage2 = true;
     public bool fatStage3 = true;
-    
+
 
     [Header("Temperature Settings")]
     public float freezingTemp;
@@ -245,6 +245,6 @@ public class PlayerVitals : MonoBehaviour
 
     void CharacterDeath()
     {
-        // DO SOMETHING HERE!
+        // DO SOMETHING HERE! ded
     }
 }
