@@ -21,6 +21,7 @@ TagManager:
   - EventSystem
   - Tooltip
   - CraftSystem
+  - Tree
   layers:
   - Default
   - TransparentFX

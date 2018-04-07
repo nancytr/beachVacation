@@ -16,6 +16,16 @@ public class RaycastManager : MonoBehaviour
     [SerializeField] private Text itemNameText;
     [SerializeField] private PlayerVitals playerVitals;
 
+    // Tree Stuff
+    [SerializeField] private TreeController treeController;
+    [SerializeField] private RightArm rightArm;
+    Animator armAnim;
+
+    void Awake()
+    {
+        armAnim = rightArm.GetComponent<Animator>();
+    }
+
     void Update()
     {
         RaycastHit hit;
@@ -38,6 +48,16 @@ public class RaycastManager : MonoBehaviour
                     //raycastedObj.GetComponent<ItemProperties>().Interaction();
                     //raycastedObj.SetActive(false);
                     properties.Interaction(playerVitals);
+                }
+            }
+            // tree stuff
+            if (hit.collider.gameObject.tag == "Tree")
+            {
+                treeController = GameObject.Find(hit.collider.gameObject.name).GetComponent<TreeController>();
+                //armAnims = GameObject.Find("rightArm@axeSwing").GetComponent<RightArm>();
+                if (Input.GetMouseButtonDown(0) && armAnim.GetCurrentAnimatorStateInfo(0).IsName("Swinging2") == true)
+                {
+                    treeController.treeHealth -= 1;
                 }
             }
         }
