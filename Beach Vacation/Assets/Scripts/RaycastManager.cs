@@ -19,11 +19,21 @@ public class RaycastManager : MonoBehaviour
     // Tree Stuff
     [SerializeField] private TreeController treeController;
     [SerializeField] private RightArm rightArm;
-    Animator armAnim;
+    private Animator armAnim;
+
+    private exit theArmAnimation;
+
+    public bool hasSwung = false;
+
+    void Start()
+    {
+        theArmAnimation = armAnim.GetBehaviour<exit>();
+        theArmAnimation.rayCast = this;
+    }
 
     void Awake()
     {
-        armAnim = rightArm.GetComponent<Animator>();
+        armAnim = GetComponent<Animator>();
     }
 
     void Update()
@@ -49,16 +59,22 @@ public class RaycastManager : MonoBehaviour
                     //raycastedObj.SetActive(false);
                     properties.Interaction(playerVitals);
                 }
+                
             }
             // tree stuff
+            
             if (hit.collider.gameObject.tag == "Tree")
             {
                 treeController = GameObject.Find(hit.collider.gameObject.name).GetComponent<TreeController>();
-                //armAnims = GameObject.Find("rightArm@axeSwing").GetComponent<RightArm>();
-                if (Input.GetMouseButtonDown(0) && armAnim.GetCurrentAnimatorStateInfo(0).IsName("Swinging2") == true)
+                armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
+                //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
+                //Debug.Log(theArmAnimation.hasSwung);
+                if (hasSwung)
                 {
+                    Debug.Log("yayayayay");
                     treeController.treeHealth -= 1;
                 }
+                //hasSwung = false;
             }
         }
 
@@ -68,6 +84,7 @@ public class RaycastManager : MonoBehaviour
             // item name back to normal
             itemNameText.text = null;
         }
+        hasSwung = false;
     }
 
     void CrosshairActive()

@@ -12,13 +12,13 @@ public class TreeController : MonoBehaviour {
 
 
 
-    [SerializeField] private int speed = 8;
+    [SerializeField] public int speed = 8;
 
-    Rigidbody rbTree;
+    public Rigidbody rbTree;
 
     // Use this for initialization
     void Start () {
-        Rigidbody rbTree = GetComponent<Rigidbody>();
+        rbTree = GetComponent<Rigidbody>();
         rbTree.isKinematic = true;
         tree = this.gameObject;
 
