@@ -43,6 +43,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        // His variables START
+        
+        GameObject _inventory;
+        // GameObject _tooltip;
+        GameObject _character;
+        // GameObject _dropBox;
+        public bool showInventory = false;
+
+        GameObject inventory;
+        GameObject craftSystem;
+        GameObject characterSystem;
+
+        // His variables END
+
         // Use this for initialization
         private void Start()
         {
@@ -56,6 +70,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            // His functions START
+
+            if (GameObject.FindGameObjectWithTag("Player") != null)
+            {
+                PlayerInventory playerInv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+                if (playerInv.inventory != null)
+                    inventory = playerInv.inventory;
+                if (playerInv.craftSystem != null)
+                    craftSystem = playerInv.craftSystem;
+                if (playerInv.characterSystem != null)
+                    characterSystem = playerInv.characterSystem;
+            }
+            
+            // His function END
         }
 
 
