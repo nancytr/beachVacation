@@ -36,16 +36,23 @@ public class TreeController : MonoBehaviour {
 
     IEnumerator destroyTree()
     {
-        yield return new WaitForSeconds(7);
-        Destroy(tree);
+
+        
+        //Destroy(this);
+        yield return new WaitForSeconds(3);
 
         Vector3 position = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f));
-        Instantiate(logs, tree.transform.position + new Vector3(0, 0, 0) + position, Quaternion.identity);
-        Instantiate(logs, tree.transform.position + new Vector3(2, 2, 0) + position, Quaternion.identity);
-        Instantiate(logs, tree.transform.position + new Vector3(5, 5, 0) + position, Quaternion.identity);
+        Instantiate(logs, this.transform.position + new Vector3(0, 0, 0) + position, this.transform.rotation);
+        Instantiate(logs, this.transform.position + new Vector3(1, 1, 0) + position, this.transform.rotation);
+        Instantiate(logs, this.transform.position + new Vector3(2, 2, 0) + position, this.transform.rotation);
 
-        Instantiate(coconut, tree.transform.position + new Vector3(0, 0, 0) + position, Quaternion.identity);
-        Instantiate(coconut, tree.transform.position + new Vector3(2, 2, 0) + position, Quaternion.identity);
-        Instantiate(coconut, tree.transform.position + new Vector3(5, 5, 0) + position, Quaternion.identity);
+        Destroy(gameObject);
+        Destroy(this);
+
+        
+
+        //Instantiate(coconut, this.transform.position + new Vector3(0, 0, 0) + position, Quaternion.identity);
+        //Instantiate(coconut, this.transform.position + new Vector3(2, 2, 0) + position, Quaternion.identity);
+        //Instantiate(coconut, this.transform.position + new Vector3(5, 5, 0) + position, Quaternion.identity);
     }
 }

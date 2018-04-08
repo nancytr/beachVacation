@@ -72,7 +72,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 2
-  logs: {fileID: 4991363439203798, guid: 1a8b6500925013a468b54fbdf961aada, type: 2}
+  logs: {fileID: 4669792877117904, guid: e7fefe1574a97bc4d9ebe6ee947ad595, type: 2}
   coconut: {fileID: 4991363439203798, guid: 1a8b6500925013a468b54fbdf961aada, type: 2}
   speed: 8
   rbTree: {fileID: 0}
