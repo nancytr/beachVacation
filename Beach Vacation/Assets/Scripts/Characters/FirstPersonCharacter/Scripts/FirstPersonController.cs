@@ -44,16 +44,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
         // His variables START
-        
-        GameObject _inventory;
-        // GameObject _tooltip;
-        GameObject _character;
-        // GameObject _dropBox;
-        public bool showInventory = false;
 
-        GameObject inventory;
-        GameObject craftSystem;
-        GameObject characterSystem;
+        // GameObject _inventory;
+        // // GameObject _tooltip;
+        // GameObject _character;
+        // // GameObject _dropBox;
+        // public bool showInventory = false;
+
+        // GameObject inventory;
+        // GameObject craftSystem;
+        // GameObject characterSystem;
 
         // His variables END
 
@@ -73,17 +73,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             // His functions START
 
-            if (GameObject.FindGameObjectWithTag("Player") != null)
-            {
-                PlayerInventory playerInv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
-                if (playerInv.inventory != null)
-                    inventory = playerInv.inventory;
-                if (playerInv.craftSystem != null)
-                    craftSystem = playerInv.craftSystem;
-                if (playerInv.characterSystem != null)
-                    characterSystem = playerInv.characterSystem;
-            }
-            
+            // if (GameObject.FindGameObjectWithTag("Player") != null)
+            // {
+            //     PlayerInventory playerInv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+            //     if (playerInv.inventory != null)
+            //         inventory = playerInv.inventory;
+            //     if (playerInv.craftSystem != null)
+            //         craftSystem = playerInv.craftSystem;
+            //     if (playerInv.characterSystem != null)
+            //         characterSystem = playerInv.characterSystem;
+            // }
+            //
             // His function END
         }
 
