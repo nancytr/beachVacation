@@ -11,7 +11,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x158998808 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x13f994e08 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -27,21 +27,21 @@
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 19872
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13440
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13696
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000ae227bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000dc4a7bc
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x155cbf993
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x155cbfa4f
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x155cbfa7f
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x155cbfb1c
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x1459d9988
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x154fff993
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x154fffa4f
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x154fffa7f
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x154fffb1c
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x13f41c918
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps', format=2, channels=2, frequency=48000, lengthbytes=19488, lengthpcm=56725, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
-[LOG] SoundI::release                          :  (0x1459d9f28)
-[LOG] SoundI::release                          :     Footsteps (0x1459da098)
+[LOG] SoundI::release                          :  (0x13f5789b8)
+[LOG] SoundI::release                          :     Footsteps (0x13ed7dda8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -57,8 +57,51 @@
 [WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
 [WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
 [WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 4096 / 16384 bytes available.
 [WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
 [WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 4096 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 4096 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
+[WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 4096 / 16384 bytes available.
 [WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
 [WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.
 [WRN] Output::RingBuffer::read                 : Buffer starvation detected, requested 8192 bytes, 0 / 16384 bytes available.

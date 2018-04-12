@@ -15,10 +15,10 @@ MonoBehaviour:
   - {fileID: 114648511089350722}
   - {fileID: 114414185214499952}
   EditorEvents:
-  - {fileID: 114433009749995026}
+  - {fileID: 114939685362833946}
   MasterBankRef: {fileID: 114414185214499952}
   StringsBankRef: {fileID: 114648511089350722}
-  stringsBankWriteTime: 636585296170000000
+  stringsBankWriteTime: 636589601020000000
   cacheVersion: 2
 --- !u!114 &114414185214499952
 MonoBehaviour:
@@ -33,11 +33,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/Alex/Documents/GitHub/beachVacation/Beach Vacation/Assets/FMOD Stuff/Audio/Build/Desktop/Master
     Bank.bank
-  lastModified: 636585296170000000
+  lastModified: 636589601020000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 33312
+    Value: 33568
   Exists: 1
 --- !u!114 &114433009749995026
 MonoBehaviour:
@@ -73,9 +73,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636585296170000000
+  lastModified: 636589601020000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 724
+    Value: 720
   Exists: 1
+--- !u!114 &114939685362833946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/New Event
+  guid: 3c0ff53c8f60484e89f06d855323fe0a
+  Banks:
+  - {fileID: 114414185214499952}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1400

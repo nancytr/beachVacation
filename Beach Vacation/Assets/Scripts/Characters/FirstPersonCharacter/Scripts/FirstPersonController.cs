@@ -28,6 +28,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+        private bool playerismoving;                              // to check if player is moving for footsteps stuff
+        [FMODUnity.EventRef]
+        public string inputsound;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -45,15 +48,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         // His variables START
         
-        GameObject _inventory;
-        // GameObject _tooltip;
-        GameObject _character;
-        // GameObject _dropBox;
-        public bool showInventory = false;
+        // GameObject _inventory;
+        // // GameObject _tooltip;
+        // GameObject _character;
+        // // GameObject _dropBox;
+        // public bool showInventory = false;
 
-        GameObject inventory;
-        GameObject craftSystem;
-        GameObject characterSystem;
+        // GameObject inventory;
+        // GameObject craftSystem;
+        // GameObject characterSystem;
 
         // His variables END
 
@@ -73,16 +76,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             // His functions START
 
-            if (GameObject.FindGameObjectWithTag("Player") != null)
-            {
-                PlayerInventory playerInv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
-                if (playerInv.inventory != null)
-                    inventory = playerInv.inventory;
-                if (playerInv.craftSystem != null)
-                    craftSystem = playerInv.craftSystem;
-                if (playerInv.characterSystem != null)
-                    characterSystem = playerInv.characterSystem;
-            }
+            // if (GameObject.FindGameObjectWithTag("Player") != null)
+            // {
+            //     PlayerInventory playerInv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+            //     if (playerInv.inventory != null)
+            //         inventory = playerInv.inventory;
+            //     if (playerInv.craftSystem != null)
+            //         craftSystem = playerInv.craftSystem;
+            //     if (playerInv.characterSystem != null)
+            //         characterSystem = playerInv.characterSystem;
+            // }
             
             // His function END
         }
@@ -111,8 +114,31 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            // Footsteps: checking for movement
+
+            // if (Input.GetAxis ("Vertical") >= 0.01f || Input.GetAxis ("Horizontal") >= 0.01f || Input.GetAxis ("Vertical") <= -0.01f || Input.GetAxis ("Horizontal") <= -0.01f) 
+            // {
+            //     //Debug.Log ("Player is moving");
+            //     playerismoving = true;
+            // } 
+            // else if (Input.GetAxis ("Vertical") == 0 || Input.GetAxis ("Horizontal") == 0) 
+            // {
+            //     //Debug.Log ("Player is not moving");
+            //     playerismoving = false;
+            // }
+
+            
         }
 
+    //     void CallFootsteps ()
+    // {
+    //     if (playerismoving == true) 
+    //     {
+    //         //Debug.Log ("Player is moving");
+    //         FMODUnity.RuntimeManager.PlayOneShot (inputsound);
+    //     } 
+    // }
 
         private void PlayLandingSound()
         {
