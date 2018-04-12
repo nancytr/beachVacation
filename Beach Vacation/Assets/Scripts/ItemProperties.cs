@@ -11,6 +11,7 @@ public class ItemProperties : MonoBehaviour {
     [SerializeField] private bool water;
     [SerializeField] private bool health;
     [SerializeField] private bool sleepingBag;
+    [SerializeField] private bool equippable;
 
     [SerializeField] private float value;
     [SerializeField] private SleepController sleepController;

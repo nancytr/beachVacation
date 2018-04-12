@@ -43,8 +43,10 @@ public class RaycastManager : MonoBehaviour
 
         if (Physics.Raycast(transform.position, fwd, out hit, rayLength, newLayerMask.value))
         {
+            // Controls functionality to name and interact the item w/ the raycast
             if (hit.collider.CompareTag("Consumable"))
             {
+                Debug.Log(" hih i");
                 CrosshairActive();
                 raycastedObj = hit.collider.gameObject;
                 // update UI name
@@ -61,10 +63,18 @@ public class RaycastManager : MonoBehaviour
                 }
                 
             }
-            // tree stuff
-            
+
+            if (hit.collider.gameObject.tag == "Equippable")
+            {
+                //raycastedObj = hit.collider.gameObject;
+                Debug.Log("hi!");
+            }
+
+
+            // Controls functionality of hitting and damaging tree
             if (hit.collider.gameObject.tag == "Tree")
             {
+                Debug.Log(" OMG");
                 treeController = GameObject.Find(hit.collider.gameObject.name).GetComponent<TreeController>();
                 armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
