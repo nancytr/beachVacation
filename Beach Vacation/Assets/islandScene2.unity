@@ -334,7 +334,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d8bee09f4790983418e364bc88d834d5, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 131524107}
   - component: {fileID: 131524106}
   - component: {fileID: 131524104}
+  - component: {fileID: 131524115}
   - component: {fileID: 131524103}
   - component: {fileID: 131524108}
   - component: {fileID: 131524105}
@@ -425,6 +426,7 @@ GameObject:
   - component: {fileID: 131524111}
   - component: {fileID: 131524112}
   - component: {fileID: 131524113}
+  - component: {fileID: 131524114}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Player
@@ -439,7 +441,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131524102}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -619,6 +621,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  inputsound: event:/Footsteps
 --- !u!143 &131524106
 CharacterController:
   m_ObjectHideFlags: 0
@@ -764,6 +767,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db4493228a4ba442a891316e3ee246f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &131524114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131524102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
+--- !u!114 &131524115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131524102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3370b7bc1154bd8a132ee290ec31ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputsound: event:/Footsteps
+  walkingspeed: 0.5
 --- !u!1 &167642610
 GameObject:
   m_ObjectHideFlags: 0

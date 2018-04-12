@@ -47,7 +47,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
         // His variables START
-<<<<<<< HEAD
         
         // GameObject _inventory;
         // // GameObject _tooltip;
@@ -55,15 +54,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // // GameObject _dropBox;
         // public bool showInventory = false;
 
-=======
-
-        // GameObject _inventory;
-        // // GameObject _tooltip;
-        // GameObject _character;
-        // // GameObject _dropBox;
-        // public bool showInventory = false;
-
->>>>>>> 377557a05af7c4cbbc7fca279f84fa5ff8142d81
         // GameObject inventory;
         // GameObject craftSystem;
         // GameObject characterSystem;
@@ -96,11 +86,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //     if (playerInv.characterSystem != null)
             //         characterSystem = playerInv.characterSystem;
             // }
-<<<<<<< HEAD
-            
-=======
             //
->>>>>>> 377557a05af7c4cbbc7fca279f84fa5ff8142d81
             // His function END
         }
 
