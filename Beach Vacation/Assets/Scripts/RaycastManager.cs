@@ -15,6 +15,8 @@ public class RaycastManager : MonoBehaviour
     [SerializeField] private Image crossHair;
     [SerializeField] private Text itemNameText;
     [SerializeField] private PlayerVitals playerVitals;
+    [SerializeField] private Interactable interactScript;
+    [SerializeField] private Inventory invenScript;
 
     // Tree Stuff
     [SerializeField] private TreeController treeController;
@@ -43,8 +45,10 @@ public class RaycastManager : MonoBehaviour
 
         if (Physics.Raycast(transform.position, fwd, out hit, rayLength, newLayerMask.value))
         {
+            // Controls functionality to name and interact the item w/ the raycast
             if (hit.collider.CompareTag("Consumable"))
             {
+                Debug.Log(" hih i");
                 CrosshairActive();
                 raycastedObj = hit.collider.gameObject;
                 // update UI name
@@ -61,10 +65,18 @@ public class RaycastManager : MonoBehaviour
                 }
                 
             }
-            // tree stuff
-            
+
+            if (hit.collider.gameObject.tag == "Equippable")
+            {
+                //raycastedObj = hit.collider.gameObject;
+                Debug.Log("hi!");
+            }
+
+
+            // Controls functionality of hitting and damaging tree
             if (hit.collider.gameObject.tag == "Tree")
             {
+                Debug.Log(" OMG");
                 treeController = GameObject.Find(hit.collider.gameObject.name).GetComponent<TreeController>();
                 armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
@@ -77,6 +89,26 @@ public class RaycastManager : MonoBehaviour
                 //hasSwung = false;
             }
         }
+            if (hit.collider.CompareTag("Item"))
+            {
+                Debug.Log("INVENTRYOOTR ACTIVE AHHA");
+                CrosshairActive();
+                Debug.Log("Please");
+                raycastedObj = hit.collider.gameObject;
+                // update UI name
+                //itemNameText.text = raycastedObj.GetComponent<ItemProperties>().itemName;
+                Item itemProps = raycastedObj.GetComponent<Item>();
+                itemNameText.text = itemProps.name;
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    //Object properties
+                    //raycastedObj.GetComponent<ItemProperties>().Interaction();
+                    //raycastedObj.SetActive(false);
+                    // itemProps.Interaction(playerVitals);
+                }
+                
+            }
 
         else
         {

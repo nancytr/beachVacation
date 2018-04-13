@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -709,6 +709,8 @@ MonoBehaviour:
   crossHair: {fileID: 0}
   itemNameText: {fileID: 0}
   playerVitals: {fileID: 131524108}
+  interactScript: {fileID: 0}
+  invenScript: {fileID: 0}
   treeController: {fileID: 318273839}
   rightArm: {fileID: 73890136}
   hasSwung: 0
@@ -6598,10 +6600,12 @@ GameObject:
   - component: {fileID: 1003121841}
   - component: {fileID: 1003121840}
   - component: {fileID: 1003121839}
+  - component: {fileID: 1003121844}
   - component: {fileID: 1003121838}
+  - component: {fileID: 1003121843}
   m_Layer: 0
   m_Name: Test Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6686,6 +6690,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1003121843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003121837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e54380fa5e844834bb5998b44a52415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.74264705, g: 0.74264705, b: 0.74264705, a: 0}
+  meshRenderer: {fileID: 0}
+--- !u!114 &1003121844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003121837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d817b56bdd437e9b298391145243c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 0}
 --- !u!1 &1042245342
 GameObject:
   m_ObjectHideFlags: 0
