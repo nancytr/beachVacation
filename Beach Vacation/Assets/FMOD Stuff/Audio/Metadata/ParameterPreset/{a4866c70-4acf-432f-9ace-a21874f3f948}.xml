@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{a4866c70-4acf-432f-9ace-a21874f3f948}">
+        <property name="name">
+            <value>isDay</value>
+        </property>
+        <relationship name="folder">
+            <destination>{45ddf2b9-8d2c-4820-8397-4f157c647c75}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{97859093-5a2f-4d4c-91b1-8d5e3006d7c5}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{97859093-5a2f-4d4c-91b1-8d5e3006d7c5}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

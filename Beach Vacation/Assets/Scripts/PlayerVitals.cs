@@ -6,9 +6,15 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerVitals : MonoBehaviour
 {
+    public musicControl music;
+    
     public Slider healthSlider;
     public int maxHealth;
     public int healthFallRate;
+    
+    //For triggering low health audio
+    public int isHurt;
+    private bool hurtAudio;
 
     public Slider thirstSlider;
     public int maxThirst;
@@ -154,6 +160,10 @@ public class PlayerVitals : MonoBehaviour
         {
             CharacterDeath();
         }
+
+        // Checks if character is hurt enough to trigger hurting audio
+
+
 
         // Hunger Controller
 

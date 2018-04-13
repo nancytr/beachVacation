@@ -8,6 +8,8 @@ public class TimeController : MonoBehaviour {
     [SerializeField] private  float secondsInFullDay = 120f;
     [SerializeField] private DaysController daysController;
 
+    
+
     [Range(0, 1)] [SerializeField] public float currentTimeOfDay = 0;
     private float timeMultiplier = 1f;
     private float sunInitialIntensity;
@@ -46,6 +48,7 @@ public class TimeController : MonoBehaviour {
         {
             intensityMultiplier = 0;
             isNight = true;
+
         }
 
         else if (currentTimeOfDay <= sunRise + 0.02f)
