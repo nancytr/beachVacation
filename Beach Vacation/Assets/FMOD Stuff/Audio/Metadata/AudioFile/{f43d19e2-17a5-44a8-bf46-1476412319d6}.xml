@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{3a7bbb3b-2cdc-45a7-8cf1-c0fb2917ee3e}">
+    <object class="AudioFile" id="{f43d19e2-17a5-44a8-bf46-1476412319d6}">
         <property name="assetPath">
-            <value>BGA.wav</value>
+            <value>bach.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>
@@ -14,7 +14,7 @@
             <value>2</value>
         </property>
         <property name="length">
-            <value>78</value>
+            <value>19.505691609977323</value>
         </property>
         <relationship name="masterAssetFolder">
             <destination>{5a33e275-12ea-4106-a481-cde9e6f7b954}</destination>

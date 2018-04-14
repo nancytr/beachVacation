@@ -16,8 +16,30 @@ public class musicControl : MonoBehaviour {
 		musicEv.start();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void isNightMusic()
+	{
+		musicEv.setParameterValue("isNight", 1f);
+		musicEv.setParameterValue("isDay", 0f);
+	}
+
+	public void isDayMusic()
+	{
+		musicEv.setParameterValue("isDay", 1f);
+		musicEv.setParameterValue("isNight", 0f);
+	}
+
+	public void isLowHealthMusic()
+	{
+		musicEv.setParameterValue("isLowHealth", 1f);
+	}
+
+	public void isNormalHealth()
+	{
+		musicEv.setParameterValue("isLowHealth", 0f);
+	}
+	
+	public void isDeadMusic()
+	{
+		musicEv.setParameterValue("isDead", 1f);
 	}
 }

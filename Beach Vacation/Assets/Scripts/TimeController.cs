@@ -19,6 +19,8 @@ public class TimeController : MonoBehaviour {
     public float sunRise = 0.23f;
     public float sunSet = 0.75f;
 
+    public musicControl musicSystem;
+
     void Start()
     {
 
@@ -49,21 +51,27 @@ public class TimeController : MonoBehaviour {
             intensityMultiplier = 0;
             isNight = true;
 
+            musicSystem.isNightMusic();
+
         }
 
         else if (currentTimeOfDay <= sunRise + 0.02f)
         {
             intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - 0.23f) * (1 / 0.02f));
+
+            musicSystem.isDayMusic();
         }
 
         else if (currentTimeOfDay >= sunSet - 0.02f)
         {
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
+            musicSystem.isDayMusic();
         }
 
         else
         {
             isNight = false;
+            musicSystem.isDayMusic();
         }
 
         sun.intensity = sunInitialIntensity * intensityMultiplier;
