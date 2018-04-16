@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemPickup2 : MonoBehaviour {
 
 		public GameObject rootItem;
+		public bool pickedUp;
+		
 
 
 

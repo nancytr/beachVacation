@@ -12,6 +12,7 @@ public class Inventory2 : MonoBehaviour {
 	public GameObject slotHolder;
 	private bool pickedUpItem;
 
+
 	public void Start()
 	{
 		GetAllSlots();
@@ -27,12 +28,8 @@ public class Inventory2 : MonoBehaviour {
 		else
 				inventory2.SetActive(false);
 
-		if(pickedUpItem == true)
-		{
-			float waitTimer = 0.5f;
-			waitTimer = 1 * Time.deltaTime;
 
-		}
+
 
 
 		//check for slots
@@ -54,9 +51,7 @@ public class Inventory2 : MonoBehaviour {
 	{
 		if (other.tag == "Item")
 		{
-			print("Item triggered");
-			if (pickedUpItem == false)
-				AddItem(other.gameObject);
+			AddItem(other.gameObject);
 		}
 	}
 
@@ -64,14 +59,15 @@ public class Inventory2 : MonoBehaviour {
 	{
 		GameObject rootItem;
 		rootItem = item.GetComponent<ItemPickup2>().rootItem;
+		print(rootItem);
 
-		for(int i = 0; i < 25; i++)
+		for(int i = 0; i < 12; i++)
 		{
-			if(slot2[i].GetComponent<Slot2>().empty == true)
+			if(slot2[i].GetComponent<Slot2>().empty == true && item.gameObject.GetComponent<ItemPickup2>().pickedUp == false)
 			{
 				slot2[i].GetComponent<Slot2>().item = rootItem;
+				item.GetComponent<ItemPickup2>().pickedUp = true;
 				Destroy(item);
-				pickedUpItem = true;
 			}
 		}
 
@@ -79,11 +75,11 @@ public class Inventory2 : MonoBehaviour {
 
 	public void GetAllSlots()
 	{
-		slot2 = new Transform[25];
-		for (int i = 0; i < 25; i++)
+		slot2 = new Transform[12];
+		for (int i = 0; i < 12; i++)
 		{
 			slot2[i] = slotHolder.transform.GetChild(i);
-			print(slot2[i].gameObject.name);
+			// print(slot2[i].gameObject.name);
 		}
 	}
 

@@ -13,14 +13,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114904207795736778}
-  - {fileID: 114396425580461602}
+  - {fileID: 114001583912477908}
   EditorEvents:
   - {fileID: 114861118774025564}
-  - {fileID: 114273138059427064}
-  MasterBankRef: {fileID: 114396425580461602}
+  MasterBankRef: {fileID: 114001583912477908}
   StringsBankRef: {fileID: 114904207795736778}
-  stringsBankWriteTime: 636593248370000000
+  stringsBankWriteTime: 636592540280796783
   cacheVersion: 2
+--- !u!114 &114001583912477908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\herct\Documents\GitHub\beachVacation\Beach Vacation\Assets\FMOD Stuff\Audio\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636592540280786773
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 37600
+  Exists: 1
 --- !u!114 &114016335981434878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +377,7 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: 3c0ff53c8f60484e89f06d855323fe0a
   Banks:
-  - {fileID: 114396425580461602}
+  - {fileID: 114001583912477908}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -378,10 +396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636593248370000000
+  Path: Assets/FMOD Stuff/Audio\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636592540280796783
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 774
+    Value: 720
   Exists: 1
