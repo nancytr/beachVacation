@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 114273138059427064}
   MasterBankRef: {fileID: 114396425580461602}
   StringsBankRef: {fileID: 114904207795736778}
-  stringsBankWriteTime: 636593243760000000
+  stringsBankWriteTime: 636593248370000000
   cacheVersion: 2
 --- !u!114 &114016335981434878
 MonoBehaviour:
@@ -70,6 +70,51 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114114718173585502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDay
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114118869488848916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isNight
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114219870585722936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isLowHealth
+  Min: 0
+  Max: 100
+  Default: 0
 --- !u!114 &114273138059427064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,10 +134,10 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114477335061707226}
-  - {fileID: 114019212247301952}
-  - {fileID: 114093473807145318}
-  - {fileID: 114804343317506000}
+  - {fileID: 114219870585722936}
+  - {fileID: 114118869488848916}
+  - {fileID: 114593478142212680}
+  - {fileID: 114114718173585502}
   MinDistance: 0
   MaxDistance: 0
   Length: 9000
@@ -131,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/Alex/Documents/GitHub/beachVacation/Beach Vacation/Assets/FMOD Stuff/Audio/Build/Desktop/Master
     Bank.bank
-  lastModified: 636593243760000000
+  lastModified: 636593248370000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -229,6 +274,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 600
+--- !u!114 &114593478142212680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDead
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114597659742774976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636593243760000000
+  lastModified: 636593248370000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
