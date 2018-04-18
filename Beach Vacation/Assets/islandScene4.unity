@@ -472,6 +472,11 @@ Prefab:
       propertyPath: item
       value: 
       objectReference: {fileID: 715070157}
+    - target: {fileID: 114300458571012272, guid: c9d9dffc714574895bf81edc291da5ec,
+        type: 2}
+      propertyPath: food
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9d9dffc714574895bf81edc291da5ec, type: 2}
   m_IsPrefabParent: 0
@@ -1115,6 +1120,7 @@ MonoBehaviour:
   water: 0
   health: 1
   sleepingBag: 0
+  equippable: 0
   value: 0
   sleepController: {fileID: 0}
   timeController: {fileID: 0}
@@ -1555,6 +1561,7 @@ MonoBehaviour:
   water: 1
   health: 0
   sleepingBag: 0
+  equippable: 0
   value: 2
   sleepController: {fileID: 0}
   timeController: {fileID: 0}
@@ -2774,7 +2781,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715070157}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2579761e16114d94d874d2a9a06887e1, type: 3}
   m_Name: 
@@ -7334,6 +7341,7 @@ MonoBehaviour:
   water: 0
   health: 0
   sleepingBag: 1
+  equippable: 0
   value: 0
   sleepController: {fileID: 1323626961}
   timeController: {fileID: 1155352669}
@@ -10118,7 +10126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4581044fa84b4200a2723c2c6419631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: event:/Music/Music
 --- !u!1 &1844825528
 GameObject:
   m_ObjectHideFlags: 0
