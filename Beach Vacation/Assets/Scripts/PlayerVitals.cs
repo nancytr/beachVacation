@@ -6,22 +6,25 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerVitals : MonoBehaviour
 {
-    // Health variables
+    public musicControl musicSystem;
+    
     public Slider healthSlider;
     public int maxHealth;
     public int healthFallRate;
+    
+    //For triggering low health audio
+    public int isHurt;
+    private bool hurtAudioPlayed;
+    private float healthLow;
 
-    // Thirst variables
     public Slider thirstSlider;
     public int maxThirst;
     public int thirstFallRate;
 
-    // Hunger variables
     public Slider hungerSlider;
     public int maxHunger;
     public int hungerFallRate;
 
-    // Stamina variables
     public Slider staminaSlider;
     public int normMaxStamina;
     public float fatMaxStamina;
@@ -31,15 +34,16 @@ public class PlayerVitals : MonoBehaviour
     public int staminaRegainMult;
 
 
-    // Fatigue variables
+
     public Slider fatigueSlider;
     public float maxFatigue;
     public float fatigueFallRate;
+
     public bool fatStage1 = true;
     public bool fatStage2 = true;
     public bool fatStage3 = true;
 
-    // Temperature variables
+
     [Header("Temperature Settings")]
     public float freezingTemp;
     public float currentTemp;
@@ -53,8 +57,6 @@ public class PlayerVitals : MonoBehaviour
 
     void Start()
     {
-        // Initializes maximum health/thirst/etc bars.
-        // Sets the maximum bar values so there's no errors.
         fatigueSlider.maxValue = maxFatigue;
         fatigueSlider.value = maxFatigue;
 
@@ -160,6 +162,19 @@ public class PlayerVitals : MonoBehaviour
             CharacterDeath();
         }
 
+        // Checks if character is hurt enough to trigger hurting audio
+
+        healthLow = maxHealth * .3f; 
+
+        if (healthSlider.value <= healthLow)
+        {
+            musicSystem.isLowHealthMusic();
+        }
+        else if (healthSlider.value > healthLow)
+        {
+            musicSystem.isNormalHealth();
+        }
+
         // Hunger Controller
 
         // Decrease hunger if player still has food in belly
@@ -251,5 +266,6 @@ public class PlayerVitals : MonoBehaviour
     void CharacterDeath()
     {
         // DO SOMETHING HERE! ded
+        musicSystem.isDeadMusic();
     }
 }

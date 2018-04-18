@@ -22,6 +22,7 @@ TagManager:
   - Tooltip
   - CraftSystem
   - Tree
+  - Equippable
   layers:
   - Default
   - TransparentFX
