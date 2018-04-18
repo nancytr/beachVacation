@@ -15,7 +15,6 @@ public class RaycastManager : MonoBehaviour
     [SerializeField] private Image crossHair;
     [SerializeField] private Text itemNameText;
     [SerializeField] private PlayerVitals playerVitals;
-    [SerializeField] private Inventory invenScript;
 
     // Tree Stuff
     [SerializeField] private TreeController treeController;
