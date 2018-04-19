@@ -19,7 +19,7 @@ public class TimeController : MonoBehaviour {
     public float sunRise = 0.23f;
     public float sunSet = 0.75f;
 
-    public musicControl musicSystem;
+    public MusicControl musicSystem;
 
     void Start()
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class musicControl : MonoBehaviour {
+public class MusicControl : MonoBehaviour {
 
 	// Audio variables
     [FMODUnity.EventRef]

@@ -6,7 +6,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerVitals : MonoBehaviour
 {
-    public musicControl musicSystem;
+    public MusicControl musicSystem;
     
     public Slider healthSlider;
     public int maxHealth;
