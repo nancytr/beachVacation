@@ -41,7 +41,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   empty: 0
-  slotTexture: {fileID: 0}
   itemTexture: {fileID: 0}
   item: {fileID: 0}
 --- !u!114 &114841328528449434

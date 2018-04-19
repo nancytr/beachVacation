@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPickup2 : MonoBehaviour {
+public class ItemPickup : MonoBehaviour {
 
 		public GameObject rootItem;
 		public bool pickedUp;
-		
+
 
 
 

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item2 : MonoBehaviour {
+public class Item : MonoBehaviour {
 
 	public Texture itemTexture;
 
 	public string type;
+	[SerializeField] public ItemProperties itemProperties;
 
 	public void Update()
 	{
