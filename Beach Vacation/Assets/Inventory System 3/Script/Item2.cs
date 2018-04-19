@@ -8,12 +8,16 @@ public class Item2 : MonoBehaviour {
 
 	public string type;
 
+	public ItemProperties properties;
+
 	public void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.F))
 		{
 			this.gameObject.SetActive(false);
 		}
+
+		
 	}
 
 }

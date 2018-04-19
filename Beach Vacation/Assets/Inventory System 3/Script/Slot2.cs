@@ -13,6 +13,8 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 		public GameObject item;
 		public GameObject playerChar;
 
+		public Player player;
+
 
 
 		void Update()
@@ -36,27 +38,44 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 		public void OnPointerDown(PointerEventData PointerEventData)
 		{
 			if(item)
-				print(item.name);
-				item.SetActive(true);
 				
-				
+				if (PointerEventData.button == PointerEventData.InputButton.Right)			// drops item into game world
+				{
+					print(item.name);
+					item.SetActive(true);
+					
+					
 
-				// adds item back into game world and removes all trace from inventory
-				itemTexture = null;
-				this.GetComponent<RawImage>().texture = null;
-				item.GetComponent<ItemPickup2>().pickedUp = false;
-				print(item.GetComponent<ItemPickup2>().pickedUp);
-				
-				// item.GetComponent<MeshRenderer>().enabled = true;
+					// adds item back into game world and removes all trace from inventory
+					itemTexture = null;
+					this.GetComponent<RawImage>().texture = null;
+					item.GetComponent<ItemPickup2>().pickedUp = false;
+					print(item.GetComponent<ItemPickup2>().pickedUp);
+					
+					// item.GetComponent<MeshRenderer>().enabled = true;
 
-				// need instantiate
-				// Instantiate(item, playerChar.transform.position, Quaternion.identity);
+					// need instantiate
+					Vector3 plyrP = new Vector3(playerChar.transform.position.x, playerChar.transform.position.y - 1, playerChar.transform.position.z);
+					Instantiate(item, plyrP + (playerChar.transform.forward * (int)2), Quaternion.identity);
+					Destroy(item);
 
-				// other form of placing it back at feet
-				item.transform.position = new Vector3 (playerChar.transform.position.x, 10.0f, playerChar.transform.position.z);
-				
-				item = null;
+					// other form of placing it back at feet
+					// item.transform.position = new Vector3 (playerChar.transform.position.x + 5f, 10.0f, playerChar.transform.position.z);
+					
+					item = null;
+				}
+				else if(PointerEventData.button == PointerEventData.InputButton.Left)
+				{
+					
+					// print ("leftmousebutton");
+					// put item properties time stuff
+					ItemProperties properties = item.GetComponent<ItemProperties>();
+					properties.Interaction(Player.player);
 
+
+					
+
+				}
 				
 
 		}
