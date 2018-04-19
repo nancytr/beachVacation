@@ -11,6 +11,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 		public Texture slotTexture;
 		public Texture itemTexture;
 		public GameObject item;
+		public GameObject playerChar;
 
 
 
@@ -21,6 +22,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 			if (item)
 			{
 				itemTexture = item.GetComponent<Item2>().itemTexture;
+				// print("gotchabitch");
 
 				this.GetComponent<RawImage>().texture = itemTexture;
 				empty = false;
@@ -36,13 +38,33 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 			if(item)
 				print(item.name);
 				item.SetActive(true);
+				
+				
+
+				// adds item back into game world and removes all trace from inventory
+				itemTexture = null;
+				this.GetComponent<RawImage>().texture = null;
+				item.GetComponent<ItemPickup2>().pickedUp = false;
+				print(item.GetComponent<ItemPickup2>().pickedUp);
+				
+				// item.GetComponent<MeshRenderer>().enabled = true;
+
+				// need instantiate
+				// Instantiate(item, playerChar.transform.position, Quaternion.identity);
+
+				// other form of placing it back at feet
+				item.transform.position = new Vector3 (playerChar.transform.position.x, 10.0f, playerChar.transform.position.z);
+				
+				item = null;
+
+				
 
 		}
 
 
 		public void OnPointerEnter(PointerEventData eventData)
 		{
-
+			print(item.name + " haha");
 		}
 
 }

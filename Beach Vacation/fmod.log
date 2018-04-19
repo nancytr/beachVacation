@@ -9,7 +9,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000033A514C8 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000004EC1BA98 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -24,24 +24,7 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] SystemI::createSound                     : filename = Assets\FMOD Stuff\Audio\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000004881F6F8 : node = 00000000338E9E30
-[LOG] SystemI::createSound                     : add node to async list : head = 000000004E38EBA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004881F6F8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD Stuff\Audio\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1112288
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17376
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000338E9F48
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bach', format=2, channels=2, frequency=48000, lengthbytes=231840, lengthpcm=936273, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.755934.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004881F6F8
-[LOG] SoundI::getSubSound                      : sound 000000004881F6F8.  Subsound index 0 / 1
-[LOG] SystemI::createSound                     : filename = Assets\FMOD Stuff\Audio\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000004881FDB8 : node = 00000000338E9260
+[LOG] SystemI::createSound                     : setdata soundi = 000000004881FDB8 : node = 00000000338EA0D0
 [LOG] SystemI::createSound                     : add node to async list : head = 000000004E38EBA8.  list count = 0
 [LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004881FDB8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD Stuff\Audio\Build\Desktop/Master Bank.bank', mode=0x02010082
@@ -49,59 +32,56 @@
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1112288
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17376
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000338E9378
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000338EA1E8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bach', format=2, channels=2, frequency=48000, lengthbytes=231840, lengthpcm=936273, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.755934.
 [LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004881FDB8
 [LOG] SoundI::getSubSound                      : sound 000000004881FDB8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : bach (000000004881F6F8)
-[LOG] SoundI::release                          :     bach (000000004E38E098)
-[LOG] SoundI::release                          :     bach (000000004881FC08)
 [LOG] SystemI::createSound                     : filename = Assets\FMOD Stuff\Audio\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000004881F6F8 : node = 00000000338E9650
+[LOG] SystemI::createSound                     : setdata soundi = 0000000047DA1C68 : node = 00000000338E8BD0
 [LOG] SystemI::createSound                     : add node to async list : head = 000000004E38EBA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004881F6F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000047DA1C68
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD Stuff\Audio\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1112288
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17376
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000338E9768
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000338E8CE8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bach', format=2, channels=2, frequency=48000, lengthbytes=231840, lengthpcm=936273, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.755934.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004881F6F8
-[LOG] SoundI::getSubSound                      : sound 000000004881F6F8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000047DA1C68
+[LOG] SoundI::getSubSound                      : sound 0000000047DA1C68.  Subsound index 0 / 1
 [LOG] SoundI::release                          : bach (000000004881FDB8)
-[LOG] SoundI::release                          :     bach (000000004E38D878)
+[LOG] SoundI::release                          :     bach (000000004E38E098)
 [LOG] SoundI::release                          :     bach (000000004881FF68)
 [LOG] SystemI::createSound                     : filename = Assets\FMOD Stuff\Audio\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000004881FDB8 : node = 00000000338E9260
+[LOG] SystemI::createSound                     : setdata soundi = 000000004ECA3468 : node = 00000000338EA0D0
 [LOG] SystemI::createSound                     : add node to async list : head = 000000004E38EBA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004881FDB8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004ECA3468
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD Stuff\Audio\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1112288
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17376
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000338E9378
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000338EA1E8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bach', format=2, channels=2, frequency=48000, lengthbytes=231840, lengthpcm=936273, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.755934.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004881FDB8
-[LOG] SoundI::getSubSound                      : sound 000000004881FDB8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : bach (000000004881F6F8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004ECA3468
+[LOG] SoundI::getSubSound                      : sound 000000004ECA3468.  Subsound index 0 / 1
+[LOG] SoundI::release                          : bach (000000004ECA3468)
+[LOG] SoundI::release                          :     bach (000000004E38CD18)
+[LOG] SoundI::release                          :     bach (000000004ECA4398)
+[LOG] SoundI::release                          : bach (0000000047DA1C68)
 [LOG] SoundI::release                          :     bach (000000004E38DA18)
-[LOG] SoundI::release                          :     bach (000000004881FC08)
-[LOG] SoundI::release                          : bach (000000004881FDB8)
-[LOG] SoundI::release                          :     bach (000000004E38E098)
-[LOG] SoundI::release                          :     bach (000000004881FF68)
+[LOG] SoundI::release                          :     bach (000000004ECA2DA8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

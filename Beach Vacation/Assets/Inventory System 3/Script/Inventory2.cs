@@ -67,7 +67,15 @@ public class Inventory2 : MonoBehaviour {
 			{
 				slot2[i].GetComponent<Slot2>().item = rootItem;
 				item.GetComponent<ItemPickup2>().pickedUp = true;
-				Destroy(item);
+				// Destroy(item);
+				
+				// if (item.GetComponent<MeshRenderer>())
+				// 	item.GetComponent<MeshRenderer>().enabled = false;
+				
+				// Destroy (item.GetComponent<Rigidbody>());
+
+				item.SetActive(false);
+
 			}
 		}
 

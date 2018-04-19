@@ -44,6 +44,7 @@ MonoBehaviour:
   slotTexture: {fileID: 0}
   itemTexture: {fileID: 0}
   item: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!114 &114841328528449434
 MonoBehaviour:
   m_ObjectHideFlags: 1
