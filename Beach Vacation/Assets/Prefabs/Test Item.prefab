@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33719071917292020}
   - component: {fileID: 65066365358996696}
   - component: {fileID: 23781978795193838}
-  - component: {fileID: 114878436700137468}
   - component: {fileID: 114584222090689444}
   - component: {fileID: 114605594794138294}
   m_Layer: 0
@@ -124,16 +123,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemTexture: {fileID: 2800000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
   type: 
---- !u!114 &114878436700137468
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1061122883670494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e54380fa5e844834bb5998b44a52415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0.74264705, g: 0.74264705, b: 0.74264705, a: 0}
-  meshRenderer: {fileID: 0}

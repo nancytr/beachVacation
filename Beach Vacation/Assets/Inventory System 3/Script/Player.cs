@@ -72,10 +72,10 @@ public class Player : MonoBehaviour
         staminaSlider.maxValue = normMaxStamina;
         staminaSlider.value = normMaxStamina;
 
-        print(fatigueSlider.value);
-        print(healthSlider.value);
-        print(hungerSlider.value);
-        print(thirstSlider.value);
+        // print(fatigueSlider.value);
+        // print(healthSlider.value);
+        // print(hungerSlider.value);
+        // print(thirstSlider.value);
 
         staminaFallRate = 1;
         staminaRegainRate = 1;
@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
         if (hungerSlider.value >= 0)
         {
             hungerSlider.value -= Time.deltaTime / hungerFallRate;
-            print("hung down");
+            // print("hung down");
 
         }
 
@@ -209,7 +209,7 @@ public class Player : MonoBehaviour
         if (thirstSlider.value >= 0)
         {
             thirstSlider.value -= Time.deltaTime / thirstFallRate;
-            print("thirstdown");
+            // print("thirstdown");
 
         }
 
