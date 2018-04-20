@@ -13,7 +13,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 		public GameObject item;
 		public GameObject playerChar;
 
-		public Player player;
+		private Player player;
 
 
 
@@ -70,10 +70,10 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 					// print ("leftmousebutton");
 					// put item properties time stuff
 					ItemProperties properties = item.GetComponent<ItemProperties>();
-					properties.Interaction(Player.player);
+					properties.Interaction(playerChar.GetComponent<Player>());
+					Destroy(item);
+					item = null;
 
-
-					
 
 				}
 				
@@ -83,7 +83,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 
 		public void OnPointerEnter(PointerEventData eventData)
 		{
-			print(item.name + " haha");
+			// print(item.name + " haha");
 		}
 
 }

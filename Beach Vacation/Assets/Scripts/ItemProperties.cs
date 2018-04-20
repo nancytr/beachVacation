@@ -25,7 +25,7 @@ public class ItemProperties : MonoBehaviour {
 
     //[SerializeField] private PlayerVitals playerVitals;
 
-    public void Interaction(PlayerVitals playerVitals)
+    public void Interaction(Player playerVitals)
     {
         if (food)
         {
