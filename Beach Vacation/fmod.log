@@ -11,7 +11,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x179b79e08 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x1403ea208 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -21,71 +21,8 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Profile::init                            : Profiler listening on port: 9264
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 0x14fb72598 : node = 0x14fb72750
-[LOG] SystemI::createSound                     : add node to async list : head = 0x14fb729c8.  list count = 0
-[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14fb72598
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     setdata soundi = 0x14fb72c28 : node = 0x14fb72de0
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x14fb729c8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2017376
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17760
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14fb72868
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bach', format=2, channels=2, frequency=48000, lengthbytes=231840, lengthpcm=936273, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.755934.
-[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14fb72598
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14fb72c28
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2017376
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17760
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14fb72ef8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Concept Composition', format=2, channels=2, frequency=48000, lengthbytes=904480, lengthpcm=3480000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988500.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14fb72c28
-[LOG] SoundI::getSubSound                      : sound 0x14fb72598.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0x14fb72c28.  Subsound index 0 / 1
-[LOG] SoundI::release                          : bach (0x14fb72598)
-[LOG] SoundI::release                          :     bach (0x13cda12c8)
-[LOG] SoundI::release                          :     bach (0x10e4c9b78)
-[LOG] SystemI::createSound                     : filename = Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x1180ed008 : node = 0x14d6f9370
-[LOG] SystemI::createSound                     : add node to async list : head = 0x14fb729c8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x1180ed008
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD Stuff/Audio/Build/Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2017376
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17760
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14d6f9488
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='insects', format=2, channels=2, frequency=48000, lengthbytes=856832, lengthpcm=2931811, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.154938.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x1180ed008
-[LOG] SoundI::getSubSound                      : sound 0x1180ed008.  Subsound index 0 / 1
-[LOG] SoundI::release                          : insects (0x1180ed008)
-[LOG] SoundI::release                          :     insects (0x13fc79498)
-[LOG] SoundI::release                          :     insects (0x13fc79628)
-[LOG] SoundI::release                          : Concept Composition (0x14fb72c28)
-[LOG] SoundI::release                          :     Concept Composition (0x1180bb7b8)
-[LOG] SoundI::release                          :     Concept Composition (0x1180bb948)
+[ERR] FMOD_OS_File_Open                        : fopen failed to open 'Assets/FMOD Stuff/Audio/Build/Desktop/.strings.bank', errno = 2
+[ERR] RuntimeBankModel::openFile               : Failed to open file 'Assets/FMOD Stuff/Audio/Build/Desktop/.strings.bank'
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -95,6 +32,4 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
