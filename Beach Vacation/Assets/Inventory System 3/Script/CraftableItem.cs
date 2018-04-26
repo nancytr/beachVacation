@@ -11,6 +11,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler {
 	public GameObject[] items;
 	public GameObject itemManager;
 
+
 	private bool hovered;
 	private GameObject player;
 
@@ -50,6 +51,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler {
 						{
 							print("item found");
 							itemsFound++;
+
 							break;
 						}
 				}
@@ -57,15 +59,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler {
 				if (itemsFound >= requiredItems)
 				{
 					//trying to delete from inventory after crafting
-					for (int z = 0; z < requiredItems; z++)
-					{
-						if (itemManager.transform.GetChild(i).GetComponent<Item2>().type == items[z].GetComponent<Item2>().type)
-							{
-								Destroy(itemManager.transform.GetChild(i).GetComponent<Item2>());
-								print("deleted");
-								break;
-							}
-					}
+
 
 					// making crafted item
 					Vector3 pos = new Vector3(player.transform.position.x , player.transform.position.y - 1, player.transform.position.z);
