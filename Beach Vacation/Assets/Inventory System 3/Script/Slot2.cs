@@ -45,7 +45,6 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 					item.SetActive(true);
 
 
-
 					// adds item back into game world and removes all trace from inventory
 					itemTexture = null;
 					this.GetComponent<RawImage>().texture = null;
@@ -76,9 +75,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 					//item.SetActive(false);
 					item = null;
 
-
 				}
-
 
 		}
 

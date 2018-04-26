@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CraftableItem : MonoBehaviour, IPointerEnterHandler {
+public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler {
 
 	public GameObject thisItem;
 	public int requiredItems;
@@ -22,15 +22,14 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler {
 		itemManager = GameObject.FindWithTag("itemManager");
 	}
 
-	public void Update()
+	// public void Update()
+	public void OnPointerDown(PointerEventData PointerEventData)
 	{
-		if (hovered == true)
-		{
-			if (Input.GetMouseButtonDown(0))
+			if (PointerEventData.button == PointerEventData.InputButton.Right)
 			{
 				CheckForRequiredItems();
 			}
-		}
+
 	}
 
 	public void CheckForRequiredItems()
@@ -63,10 +62,10 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler {
 					{
 						if (itemManager.transform.GetChild(i).GetComponent<Item2>().type == items[z].GetComponent<Item2>().type)
 							{
-								var found = itemManager.transform.GetChild(i).GetComponent<Item2>().itemTexture;
-								found = null;
+								//var found = itemManager.transform.GetChild(i).GetComponent<Item2>().itemTexture;
+								//found = null;
 								print("deleted");
-								Destroy(itemManager.transform.GetChild(i));
+								Destroy(itemManager.transform.GetChild(i).gameObject);
 								break;
 							}
 					}
