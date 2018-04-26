@@ -4,6 +4,7 @@
 [LOG] SystemI::init                            : Initialize version=11004 (93853), maxchannels=1024, flags=0x00030000
 [LOG] OutputCoreAudio::enumerate               : Enumerating...
 [LOG] OutputCoreAudio::enumerate               : Found output driver: "Built-in Output".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "HDMI".
 [LOG] OutputCoreAudio::enumerate               : Done.
 [LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
@@ -11,7 +12,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x1403ea208 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x13ef41008 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -23,6 +24,8 @@
 [LOG] Profile::init                            : Profiler listening on port: 9264
 [ERR] FMOD_OS_File_Open                        : fopen failed to open 'Assets/FMOD Stuff/Audio/Build/Desktop/.strings.bank', errno = 2
 [ERR] RuntimeBankModel::openFile               : Failed to open file 'Assets/FMOD Stuff/Audio/Build/Desktop/.strings.bank'
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

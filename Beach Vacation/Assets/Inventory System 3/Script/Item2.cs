@@ -17,7 +17,7 @@ public class Item2 : MonoBehaviour {
 			this.gameObject.SetActive(false);
 		}
 
-		
+
 	}
 
 }

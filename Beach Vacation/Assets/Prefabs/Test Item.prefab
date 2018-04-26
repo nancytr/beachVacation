@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061122883670494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 142.96, y: 10.74, z: 240.7}
+  m_LocalPosition: {x: 142.96, y: 10.74, z: 246.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTexture: {fileID: 2800000, guid: eb5f6e2757c821940b69cf1456f7865a, type: 3}
-  type: 
+  type: water
   properties: {fileID: 0}
 --- !u!114 &114805114492389042
 MonoBehaviour:
@@ -136,12 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e482bb6664a194f86dd3115c73c4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: water
+  itemName: 
   food: 0
   water: 1
   health: 0
   sleepingBag: 0
   equippable: 0
-  value: 10
+  value: 5
   sleepController: {fileID: 0}
   timeController: {fileID: 0}

@@ -23,6 +23,7 @@ TagManager:
   - CraftSystem
   - Tree
   - Equippable
+  - ItemManager
   layers:
   - Default
   - TransparentFX

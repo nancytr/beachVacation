@@ -57,7 +57,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 					// need instantiate
 					Vector3 plyrP = new Vector3(playerChar.transform.position.x, playerChar.transform.position.y - 1, playerChar.transform.position.z);
 					Instantiate(item, plyrP + (playerChar.transform.forward * (int)2), Quaternion.identity);
-					Destroy(item);
+					//Destroy(item);
 
 					// other form of placing it back at feet
 					// item.transform.position = new Vector3 (playerChar.transform.position.x + 5f, 10.0f, playerChar.transform.position.z);
@@ -73,6 +73,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 					properties.Interaction(playerChar.GetComponent<Player>());
 					print("itemproperties");
 					Destroy(item);
+					//item.SetActive(false);
 					item = null;
 
 

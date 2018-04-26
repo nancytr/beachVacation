@@ -7,7 +7,7 @@ public class Inventory2 : MonoBehaviour {
 
 	public bool inventory2Enabled;
 	public GameObject inventory2;
-	public GameObject itemDatabase;
+	public GameObject itemManager;
 	private Transform[] slot2;
 	public GameObject slotHolder;
 	private bool pickedUpItem;
@@ -27,9 +27,6 @@ public class Inventory2 : MonoBehaviour {
 				inventory2.SetActive(true);
 		else
 				inventory2.SetActive(false);
-
-
-
 
 
 		//check for slots
@@ -67,11 +64,14 @@ public class Inventory2 : MonoBehaviour {
 			{
 				slot2[i].GetComponent<Slot2>().item = rootItem;
 				item.GetComponent<ItemPickup2>().pickedUp = true;
+
+				item.transform.parent = itemManager.transform;     //actually add to itemdatabase
+				item.transform.position = itemManager.transform.position;
 				// Destroy(item);
-				
+
 				// if (item.GetComponent<MeshRenderer>())
 				// 	item.GetComponent<MeshRenderer>().enabled = false;
-				
+
 				// Destroy (item.GetComponent<Rigidbody>());
 
 				item.SetActive(false);
