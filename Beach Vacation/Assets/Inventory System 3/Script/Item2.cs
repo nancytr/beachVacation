@@ -12,10 +12,10 @@ public class Item2 : MonoBehaviour {
 
 	public void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.F))
-		{
-			this.gameObject.SetActive(false);
-		}
+		// if(Input.GetKeyDown(KeyCode.F))
+		// {
+		// 	this.gameObject.SetActive(false);
+		// }
 
 
 	}

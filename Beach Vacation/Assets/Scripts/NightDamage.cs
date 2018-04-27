@@ -5,7 +5,7 @@ using UnityEngine;
 public class NightDamage : MonoBehaviour {
 
     [SerializeField] private TimeController timeController;
-    [SerializeField] private PlayerVitals playerVitals;
+    [SerializeField] private Player playerVitals;
     [SerializeField] private LightSafety lightSafety;
 
 
