@@ -37,7 +37,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 
 		public void OnPointerDown(PointerEventData PointerEventData)
 		{
-			if(item)
+			if(item)			
 
 				if (PointerEventData.button == PointerEventData.InputButton.Right)			// drops item into game world
 				{
@@ -56,14 +56,14 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 					// need instantiate
 					Vector3 plyrP = new Vector3(playerChar.transform.position.x, playerChar.transform.position.y - 1, playerChar.transform.position.z);
 					Instantiate(item, plyrP + (playerChar.transform.forward * (int)2), Quaternion.identity);
-					//Destroy(item);
+					Destroy(item);
 
 					// other form of placing it back at feet
 					// item.transform.position = new Vector3 (playerChar.transform.position.x + 5f, 10.0f, playerChar.transform.position.z);
 
 					item = null;
 				}
-				else if(PointerEventData.button == PointerEventData.InputButton.Left)
+				else if(PointerEventData.button == PointerEventData.InputButton.Left && item.GetComponent<ItemProperties>().craftable == false)
 				{
 
 					// print ("leftmousebutton");

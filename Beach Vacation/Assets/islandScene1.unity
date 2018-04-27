@@ -995,6 +995,7 @@ MonoBehaviour:
   inventory2: {fileID: 2034241794}
   itemManager: {fileID: 1085765274}
   slotHolder: {fileID: 1328508712}
+  disableManager: {fileID: 16689900}
 --- !u!114 &131524116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7474,7 +7475,8 @@ MonoBehaviour:
   requiredItems: 1
   items:
   - {fileID: 1061122883670494, guid: ec5b5e1f7b7934c16b75c89269d1c258, type: 2}
-  itemManager: {fileID: 0}
+  itemManager: {fileID: 1085765274}
+  playerChar: {fileID: 131524102}
 --- !u!1 &982856462
 GameObject:
   m_ObjectHideFlags: 0

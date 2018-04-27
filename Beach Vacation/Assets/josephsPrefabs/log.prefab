@@ -23,9 +23,12 @@ GameObject:
   - component: {fileID: 23940624212380108}
   - component: {fileID: 54336132134931760}
   - component: {fileID: 65196440845564062}
+  - component: {fileID: 114447269416028102}
+  - component: {fileID: 114508268201444638}
+  - component: {fileID: 114579368748146208}
   m_Layer: 0
   m_Name: log
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,3 +114,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.014132702, y: 0.032276276, z: 0.015614098}
   m_Center: {x: -0.0070584104, y: 0, z: -0.0000000011641533}
+--- !u!114 &114447269416028102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403347772331324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ae9992e1a194e88991a4d1644d9b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootItem: {fileID: 1403347772331324}
+  pickedUp: 0
+--- !u!114 &114508268201444638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403347772331324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e482bb6664a194f86dd3115c73c4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Wood
+  food: 0
+  water: 0
+  health: 0
+  craftable: 1
+  sleepingBag: 0
+  equippable: 0
+  value: 0
+  sleepController: {fileID: 0}
+  timeController: {fileID: 0}
+--- !u!114 &114579368748146208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403347772331324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a867d3c92766497bb51afc6d92b65fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemTexture: {fileID: 2800000, guid: 3c34a7090dbca114b8ce4fabc1db75af, type: 3}
+  type: Wood
+  properties: {fileID: 114508268201444638}

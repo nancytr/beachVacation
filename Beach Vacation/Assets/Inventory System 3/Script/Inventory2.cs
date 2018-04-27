@@ -11,6 +11,7 @@ public class Inventory2 : MonoBehaviour {
 	private Transform[] slot2;
 	public GameObject slotHolder;
 	private bool pickedUpItem;
+	public GameObject disableManager;
 
 
 	public void Start()
@@ -24,9 +25,13 @@ public class Inventory2 : MonoBehaviour {
 				inventory2Enabled = !inventory2Enabled;
 
 		if (inventory2Enabled)
+		{
 				inventory2.SetActive(true);
+				// disableManager.GetComponent<DisableManager>().DisablePlayer();
+		}
 		else
 				inventory2.SetActive(false);
+				// disableManager.GetComponent<DisableManager>().EnablePlayer();
 
 
 		//check for slots

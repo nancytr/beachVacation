@@ -74,14 +74,14 @@ public class RaycastManager : MonoBehaviour
             // Controls functionality of hitting and damaging tree
             if (hit.collider.gameObject.tag == "Tree")
             {
-                Debug.Log(" OMG a treeee");
+                // Debug.Log(" OMG a treeee");
                 treeController = GameObject.Find(hit.collider.gameObject.name).GetComponent<TreeController>();
                 armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
                 //Debug.Log(theArmAnimation.hasSwung);
                 if (hasSwung)
                 {
-                    Debug.Log("yayayayay i swung");
+                    // Debug.Log("yayayayay i swung");
                     treeController.treeHealth -= 1;
                 }
                 //hasSwung = false;

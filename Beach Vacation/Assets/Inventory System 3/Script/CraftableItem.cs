@@ -10,6 +10,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
 	public int requiredItems;
 	public GameObject[] items;
 	public GameObject itemManager;
+	public GameObject playerChar;
 
 
 	private bool hovered;
@@ -72,7 +73,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
 
 					// making crafted item
 					Vector3 pos = new Vector3(player.transform.position.x , player.transform.position.y - 1, player.transform.position.z);
-					GameObject craftedItem = Instantiate(thisItem, pos, Quaternion.identity);
+					GameObject craftedItem = Instantiate(thisItem, pos + (playerChar.transform.forward * (int)2), Quaternion.identity);
 					//player.GetComponent<Inventory2>()AddItem(craftedItem);
 					print("all items are found");
 

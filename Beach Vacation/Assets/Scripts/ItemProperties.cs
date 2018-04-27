@@ -10,6 +10,7 @@ public class ItemProperties : MonoBehaviour {
     [SerializeField] private bool food;
     [SerializeField] private bool water;
     [SerializeField] private bool health;
+    [SerializeField] public bool craftable;
     [SerializeField] private bool sleepingBag;
     [SerializeField] private bool equippable;
 
