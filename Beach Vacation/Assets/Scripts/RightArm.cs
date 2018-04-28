@@ -5,6 +5,7 @@ using UnityEngine;
 public class RightArm : MonoBehaviour
 {
 
+    [SerializeField] private RaycastManager raycastManager;
     public bool hasSwung = false;
 
     Animator anim;
@@ -18,15 +19,19 @@ public class RightArm : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && raycastManager.IsLookingAtTree)
         {
+
+            anim.SetBool("IsSwinging", true);
+            //anim.SetTrigger("Swing");
+        }
+
+        else if (Input.GetMouseButton(0) && !raycastManager.IsLookingAtTree)
+        {
+            //anim.SetBool("IsSwinging", false);
             anim.SetTrigger("Swing");
         }
 
-        if (Input.GetMouseButton(1))
-        {
-            anim.SetBool("IsSwinging", true);
-        }
         else
         {
             anim.SetBool("IsSwinging", false);

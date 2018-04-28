@@ -24,6 +24,10 @@ public class RaycastManager : MonoBehaviour
     private exit theArmAnimation;
 
     public bool hasSwung = false;
+    public bool IsLookingAtTree = false;
+
+    // Axe stuff
+    [SerializeField] private Transform axe;
 
     void Start()
     {
@@ -74,7 +78,8 @@ public class RaycastManager : MonoBehaviour
             // Controls functionality of hitting and damaging tree
             if (hit.collider.gameObject.tag == "Tree")
             {
-                // Debug.Log(" OMG a treeee");
+                IsLookingAtTree = true;
+                //Debug.Log(" OMG a treeee");
                 treeController = GameObject.Find(hit.collider.gameObject.name).GetComponent<TreeController>();
                 armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
@@ -86,7 +91,28 @@ public class RaycastManager : MonoBehaviour
                 }
                 //hasSwung = false;
             }
+
+            if (hit.collider.gameObject.tag == "axe")
+            {
+                raycastedObj = hit.collider.gameObject;
+                ItemProperties properties = raycastedObj.GetComponent<ItemProperties>();
+
+                itemNameText.text = properties.itemName;
+
+                if (Input.GetKeyDown("e"))
+                {
+                    Debug.Log("E has been pressed");
+                    armAnim.enabled = true;
+                    Destroy(GameObject.Find("hamer"));
+                }
+            }
+
+            
+
+            
         }
+
+        
             // if (hit.collider.CompareTag("Item"))
             // {
             //     Debug.Log("INVENTRYOOTR ACTIVE AHHA");
@@ -113,8 +139,16 @@ public class RaycastManager : MonoBehaviour
             CrosshairNormal();
             // item name back to normal
             itemNameText.text = null;
+            IsLookingAtTree = false;
         }
         hasSwung = false;
+
+        //if (Input.GetKeyDown("q") && armAnim.enabled)
+        //{
+        //    Debug.Log("Q has been pressed");
+        //    Instantiate(axe, fwd, Quaternion.identity);
+        //    armAnim.enabled = false;
+        //}
     }
 
     void CrosshairActive()
