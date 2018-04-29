@@ -54,7 +54,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 					// item.GetComponent<MeshRenderer>().enabled = true;
 
 					// need instantiate
-					Vector3 plyrP = new Vector3(playerChar.transform.position.x, playerChar.transform.position.y - 1, playerChar.transform.position.z);
+					Vector3 plyrP = new Vector3(playerChar.transform.position.x, playerChar.transform.position.y + 3, playerChar.transform.position.z);
 					Instantiate(item, plyrP + (playerChar.transform.forward * (int)2), Quaternion.identity);
 					Destroy(item);
 
