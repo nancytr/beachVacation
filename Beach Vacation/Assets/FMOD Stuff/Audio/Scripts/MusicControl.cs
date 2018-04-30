@@ -19,12 +19,10 @@ public class MusicControl : MonoBehaviour {
 	public void isNightMusic()
 	{
 		musicEv.setParameterValue("isNight", 1f);
-		musicEv.setParameterValue("isDay", 0f);
 	}
 
 	public void isDayMusic()
 	{
-		musicEv.setParameterValue("isDay", 1f);
 		musicEv.setParameterValue("isNight", 0f);
 	}
 

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{b9dac0bb-7f18-44fc-99b9-7d65244c72b7}">
+    <object class="AudioFile" id="{164dca70-f4ba-48bc-9384-59f9f766514b}">
         <property name="assetPath">
-            <value>Footsteps 5.wav</value>
+            <value>11 Fireplace.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
         </property>
         <property name="frequencyInKHz">
             <value>44.0999985</value>
@@ -11,7 +14,7 @@
             <value>2</value>
         </property>
         <property name="length">
-            <value>0.45625850340136054</value>
+            <value>45.133333333333333</value>
         </property>
         <relationship name="masterAssetFolder">
             <destination>{5a33e275-12ea-4106-a481-cde9e6f7b954}</destination>
