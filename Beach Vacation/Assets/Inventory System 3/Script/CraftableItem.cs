@@ -16,6 +16,8 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
 	private bool hovered;
 	private GameObject player;
 
+    [FMODUnity.EventRef]
+    public string craftingSound;
 
 	public void Start()
 	{
@@ -76,6 +78,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
 					GameObject craftedItem = Instantiate(thisItem, pos + (playerChar.transform.forward * (int)2), Quaternion.identity);
 					//player.GetComponent<Inventory2>()AddItem(craftedItem);
 					print("all items are found");
+                    FMODUnity.RuntimeManager.PlayOneShot(craftingSound);
 					break;
 
 				}

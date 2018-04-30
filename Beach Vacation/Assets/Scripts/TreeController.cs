@@ -10,7 +10,8 @@ public class TreeController : MonoBehaviour {
 
     [SerializeField] public static GameObject tree = null;
 
-
+    [FMODUnity.EventRef]
+    public string fallingSound;
 
     [SerializeField] public int speed = 8;
 
@@ -31,6 +32,8 @@ public class TreeController : MonoBehaviour {
             rbTree.isKinematic = false;
             rbTree.AddForce(transform.forward * speed);
             StartCoroutine(destroyTree());
+
+            FMODUnity.RuntimeManager.PlayOneShot(fallingSound);
         }
 	}
 

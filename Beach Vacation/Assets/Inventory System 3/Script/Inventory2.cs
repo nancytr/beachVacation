@@ -111,7 +111,7 @@ public class Inventory2 : MonoBehaviour {
 		for (int i = 0; i < 12; i++)
 		{
 			slot2[i] = slotHolder.transform.GetChild(i);
-			print(slot2[i]);
+			// print(slot2[i]);
 			// print(slot2[i].gameObject.name);
 		}
 	}

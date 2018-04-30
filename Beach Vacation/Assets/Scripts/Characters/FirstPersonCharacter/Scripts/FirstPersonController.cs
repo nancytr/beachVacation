@@ -30,7 +30,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
         private bool playerismoving;                              // to check if player is moving for footsteps stuff
         [FMODUnity.EventRef]
-        public string inputsound;
+        public string landingSound;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -45,6 +45,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+
+        // public GameObject musicSystem;
 
         // His variables START
         
@@ -142,9 +144,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayLandingSound()
         {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
+            //m_AudioSource.clip = m_LandSound;
+            //m_AudioSource.Play();
+            //m_NextStep = m_StepCycle + .5f;
+
+            FMODUnity.RuntimeManager.PlayOneShot(landingSound);
         }
 
 

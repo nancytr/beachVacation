@@ -8,6 +8,9 @@ public class RightArm : MonoBehaviour
     [SerializeField] private RaycastManager raycastManager;
     public bool hasSwung = false;
 
+    [FMODUnity.EventRef]
+    public string hittingSound;
+
     Animator anim;
     // Use this for initialization
     void Start()
@@ -30,6 +33,8 @@ public class RightArm : MonoBehaviour
         {
             //anim.SetBool("IsSwinging", false);
             anim.SetTrigger("Swing");
+
+            FMODUnity.RuntimeManager.PlayOneShot(hittingSound);
         }
 
         else

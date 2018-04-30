@@ -18,6 +18,11 @@ public class ItemProperties : MonoBehaviour {
     [SerializeField] private SleepController sleepController;
     [SerializeField] private TimeController timeController;
 
+    // sound variables
+    [FMODUnity.EventRef]
+    public string eatingSound;
+    public string drinkingSound;
+
     void Start()
     {
         sleepController = GameObject.FindGameObjectWithTag("SleepController").GetComponent<SleepController>();
@@ -32,12 +37,15 @@ public class ItemProperties : MonoBehaviour {
         {
             playerVitals.hungerSlider.value += value;
             this.gameObject.SetActive(false);
+
+            FMODUnity.RuntimeManager.PlayOneShot(eatingSound);
         }
 
         else if (water)
         {
             playerVitals.thirstSlider.value += value;
             this.gameObject.SetActive(false);
+            FMODUnity.RuntimeManager.PlayOneShot(drinkingSound);
         }
 
         else if (health)
