@@ -26,8 +26,8 @@ GameObject:
   - component: {fileID: 114205600876420694}
   - component: {fileID: 114796168537946692}
   - component: {fileID: 54411409519418220}
-  - component: {fileID: 65136426190474842}
   - component: {fileID: 114293996803302174}
+  - component: {fileID: 65151952817818760}
   m_Layer: 0
   m_Name: plank
   m_TagString: Item
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808684192613188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 170.03969, y: 11.79, z: 257.94974}
+  m_LocalPosition: {x: 146.82803, y: 11.410198, z: 240.44429}
   m_LocalScale: {x: 0.3744155, y: 1.9560391, z: 0.20932774}
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,7 +104,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &65136426190474842
+--- !u!65 &65151952817818760
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,8 +114,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.195641, y: 1.0000001, z: 6.6052427}
-  m_Center: {x: 0.1446133, y: 0, z: 0.20461331}
+  m_Size: {x: 2.47, y: 1.0000001, z: 3.42}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65624556533080538
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a867d3c92766497bb51afc6d92b65fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemTexture: {fileID: 2800000, guid: ffbc4ff073065254585f69e966389160, type: 3}
+  itemTexture: {fileID: 2800000, guid: 1e6d3f695fdc04df597b260e92aef0d2, type: 3}
   type: 
   properties: {fileID: 0}
 --- !u!114 &114293996803302174

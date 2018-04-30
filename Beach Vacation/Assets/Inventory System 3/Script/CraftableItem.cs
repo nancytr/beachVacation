@@ -20,7 +20,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
 	public void Start()
 	{
 		player = GameObject.FindWithTag("Player");
-		itemManager = GameObject.FindWithTag("itemManager");
+		// itemManager = GameObject.FindWithTag("ItemManager");
 	}
 
 	// public void Update()
@@ -76,6 +76,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
 					GameObject craftedItem = Instantiate(thisItem, pos + (playerChar.transform.forward * (int)2), Quaternion.identity);
 					//player.GetComponent<Inventory2>()AddItem(craftedItem);
 					print("all items are found");
+					break;
 
 				}
 

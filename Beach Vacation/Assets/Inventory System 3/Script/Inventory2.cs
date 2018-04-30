@@ -29,11 +29,17 @@ public class Inventory2 : MonoBehaviour {
 
 		if (inventory2Enabled)
 		{
-				inventory2.SetActive(true);
+				inventory2.GetComponent<CanvasGroup>().alpha = 1f; 
+     			inventory2.GetComponent<CanvasGroup>().blocksRaycasts = false;
+				
+				// inventory2.SetActive(true);
 				// disableManager.GetComponent<DisableManager>().DisablePlayer();
 		}
 		else
-				inventory2.SetActive(false);
+				inventory2.GetComponent<CanvasGroup>().alpha = 0f; 
+     			inventory2.GetComponent<CanvasGroup>().blocksRaycasts = true;
+				
+				// inventory2.SetActive(false);
 				// disableManager.GetComponent<DisableManager>().EnablePlayer();
 
 
@@ -59,9 +65,12 @@ public class Inventory2 : MonoBehaviour {
 		{
             if (Input.GetKeyDown(KeyCode.E))
             {
-                AddItem(other.gameObject);
+               print("about to add");
+			    AddItem(other.gameObject);
+				print("added");
             }
 			//AddItem(other.gameObject);
+			
 		}
 	}
 
@@ -102,6 +111,7 @@ public class Inventory2 : MonoBehaviour {
 		for (int i = 0; i < 12; i++)
 		{
 			slot2[i] = slotHolder.transform.GetChild(i);
+			print(slot2[i]);
 			// print(slot2[i].gameObject.name);
 		}
 	}

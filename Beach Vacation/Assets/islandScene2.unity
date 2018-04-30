@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23838386, g: 0.14934748, b: 0.292301, a: 1}
+  m_IndirectSpecularColor: {r: 0.23837689, g: 0.14933816, b: 0.2922926, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -11491,6 +11491,11 @@ Prefab:
     - target: {fileID: 1255884481358774, guid: 0b627e433fd524c71984f4e14ca13c91, type: 2}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114841328528449434, guid: 0b627e433fd524c71984f4e14ca13c91,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114225270042750426, guid: 0b627e433fd524c71984f4e14ca13c91, type: 2}
@@ -38582,6 +38587,7 @@ GameObject:
   - component: {fileID: 1328508716}
   - component: {fileID: 1328508715}
   - component: {fileID: 1328508714}
+  - component: {fileID: 1328508717}
   m_Layer: 5
   m_Name: Slot Holder
   m_TagString: Untagged
@@ -38675,6 +38681,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328508712}
+--- !u!114 &1328508717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1328508712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8af0a0f0e22f64394d4831c7d0700e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1329122004
 Prefab:
   m_ObjectHideFlags: 0
@@ -58652,6 +58669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034241795}
   - component: {fileID: 2034241796}
+  - component: {fileID: 2034241797}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -58687,6 +58705,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2034241794}
+--- !u!225 &2034241797
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034241794}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &2035142673 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4544309619064426, guid: 22a25e13691f399469547e957d1206fa,

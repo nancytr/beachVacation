@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114447269416028102}
   - component: {fileID: 114508268201444638}
   - component: {fileID: 114579368748146208}
+  - component: {fileID: 114551652002271150}
   m_Layer: 0
   m_Name: log
   m_TagString: Item
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403347772331324}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 132.39511, y: 12.46, z: 258.7894}
+  m_LocalPosition: {x: 158.45, y: 12.46, z: 252.15}
   m_LocalScale: {x: 22.780975, y: 22.780975, z: 22.780975}
   m_Children: []
   m_Father: {fileID: 0}
@@ -148,6 +149,22 @@ MonoBehaviour:
   value: 0
   sleepController: {fileID: 0}
   timeController: {fileID: 0}
+--- !u!114 &114551652002271150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403347772331324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52326a53587c74fe787ff5032923f20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canHold: 1
+  item: {fileID: 1403347772331324}
+  tempParent: {fileID: 0}
+  guide: {fileID: 0}
+  isHolding: 0
 --- !u!114 &114579368748146208
 MonoBehaviour:
   m_ObjectHideFlags: 1
