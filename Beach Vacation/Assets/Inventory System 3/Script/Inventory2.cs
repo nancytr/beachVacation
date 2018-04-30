@@ -13,6 +13,9 @@ public class Inventory2 : MonoBehaviour {
 	private bool pickedUpItem;
 	public GameObject disableManager;
 
+    Color brown = new Color(146, 110, 80);
+    Color white = new Color(255, 255, 255);
+
 
 	public void Start()
 	{
@@ -74,9 +77,11 @@ public class Inventory2 : MonoBehaviour {
 			{
 				slot2[i].GetComponent<Slot2>().item = rootItem;
 				item.GetComponent<ItemPickup2>().pickedUp = true;
+                //slot2[i].GetComponent<RawImage>().color = white;
 
 				item.transform.parent = itemManager.transform;     //actually add to itemdatabase
 				item.transform.position = itemManager.transform.position;
+
 				// Destroy(item);
 
 				// if (item.GetComponent<MeshRenderer>())

@@ -15,7 +15,8 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 
 		private Player player;
 
-
+        Color brown = new Color(146, 110, 80);
+        Color white = new Color(255, 255, 255);
 
 		void Update()
 		{
@@ -27,12 +28,22 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 				// print("gotchabitch");
 
 				this.GetComponent<RawImage>().texture = itemTexture;
+                
 				empty = false;
 			} else {
 				this.GetComponent<RawImage>().texture = slotTexture;
+                
 				empty = true;
 			}
 
+            //if (empty)
+            //{
+            //    this.GetComponent<RawImage>().color = brown;
+            //}
+            //else
+            //{
+            //    this.GetComponent<RawImage>().color = white;
+            //}
 		}
 
 		public void OnPointerDown(PointerEventData PointerEventData)
@@ -50,6 +61,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 					this.GetComponent<RawImage>().texture = null;
 					item.GetComponent<ItemPickup2>().pickedUp = false;
 					print(item.GetComponent<ItemPickup2>().pickedUp);
+                    //this.GetComponent<RawImage>().color = brown;
 
 					// item.GetComponent<MeshRenderer>().enabled = true;
 
