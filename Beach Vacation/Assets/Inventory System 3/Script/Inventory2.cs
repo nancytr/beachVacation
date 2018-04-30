@@ -49,12 +49,12 @@ public class Inventory2 : MonoBehaviour {
 	}
 
 
-	public void OnTriggerEnter(Collider other)
+	public void OnTriggerStay(Collider other)
 	{
         // logic for picking up item by walking over
 		if (other.tag == "Item")
 		{
-            if (Input.GetKeyDown("e"))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 AddItem(other.gameObject);
             }

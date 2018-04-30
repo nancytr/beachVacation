@@ -45,12 +45,12 @@ public class Player : MonoBehaviour
 
 
     [Header("Temperature Settings")]
-    public float freezingTemp;
-    public float currentTemp;
-    public float normalTemp;
-    public float heatTemp;
-    public Text tempNumber;
-    public Image tempBG;
+    //public float freezingTemp;
+    //public float currentTemp;
+    //public float normalTemp;
+    //public float heatTemp;
+    //public Text tempNumber;
+    //public Image tempBG;
 
     private CharacterController charController;
     private FirstPersonController playerController;
@@ -72,11 +72,6 @@ public class Player : MonoBehaviour
         staminaSlider.maxValue = normMaxStamina;
         staminaSlider.value = normMaxStamina;
 
-        // print(fatigueSlider.value);
-        // print(healthSlider.value);
-        // print(hungerSlider.value);
-        // print(thirstSlider.value);
-
         staminaFallRate = 1;
         staminaRegainRate = 1;
 
@@ -84,10 +79,10 @@ public class Player : MonoBehaviour
         playerController = GetComponent<FirstPersonController>();
     }
 
-    void UpdateTemp()
-    {
-        tempNumber.text = currentTemp.ToString("00.0");
-    }
+    //void UpdateTemp()
+    //{
+    //    tempNumber.text = currentTemp.ToString("00.0");
+    //}
 
     void Update()
     {
@@ -129,6 +124,7 @@ public class Player : MonoBehaviour
             fatigueSlider.value = maxFatigue;
         }
 
+        /*
         //Temperature Section
         if (currentTemp <= freezingTemp)
         {
@@ -147,6 +143,7 @@ public class Player : MonoBehaviour
             tempBG.color = Color.green;
             UpdateTemp();
         }
+        */
 
 
         // Health Controller
@@ -157,7 +154,7 @@ public class Player : MonoBehaviour
             healthSlider.value -= Time.deltaTime / healthFallRate * 2;
         }
 
-        else if (hungerSlider.value <= 0 || thirstSlider.value <= 0 || currentTemp <= freezingTemp || currentTemp >= heatTemp)
+        else if (hungerSlider.value <= 0 || thirstSlider.value <= 0) //|| currentTemp <= freezingTemp || currentTemp >= heatTemp)
         {
             healthSlider.value -= Time.deltaTime / healthFallRate;
         }
@@ -186,7 +183,6 @@ public class Player : MonoBehaviour
         if (hungerSlider.value >= 0)
         {
             hungerSlider.value -= Time.deltaTime / hungerFallRate;
-            // print("hung down");
 
         }
 
@@ -209,7 +205,6 @@ public class Player : MonoBehaviour
         if (thirstSlider.value >= 0)
         {
             thirstSlider.value -= Time.deltaTime / thirstFallRate;
-            // print("thirstdown");
 
         }
 
@@ -233,10 +228,10 @@ public class Player : MonoBehaviour
             staminaSlider.value -= Time.deltaTime / staminaFallRate * staminaFallMult;
 
             // and also gain some heat ;)
-            if (staminaSlider.value > 0)
-            {
-                currentTemp += Time.deltaTime / 5;
-            }
+            //if (staminaSlider.value > 0)
+            //{
+            //    currentTemp += Time.deltaTime / 5;
+            //}
         }
 
         // if player is moving but not sprinting, regain some stamina
@@ -244,10 +239,10 @@ public class Player : MonoBehaviour
         {
             staminaSlider.value += Time.deltaTime / staminaRegainRate * staminaRegainMult;
 
-            if (currentTemp >= normalTemp)
-            {
-                currentTemp -= Time.deltaTime / 10;
-            }
+            //if (currentTemp >= normalTemp)
+            //{
+            //    currentTemp -= Time.deltaTime / 10;
+            //}
         }
 
         // This prevents stamina from going over 100%
@@ -275,6 +270,4 @@ public class Player : MonoBehaviour
         // DO SOMETHING HERE! ded
         musicSystem.isDeadMusic();
     }
-
-    
 }
