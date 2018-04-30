@@ -25,6 +25,7 @@ TagManager:
   - Equippable
   - ItemManager
   - axe
+  - Guide
   layers:
   - Default
   - TransparentFX
