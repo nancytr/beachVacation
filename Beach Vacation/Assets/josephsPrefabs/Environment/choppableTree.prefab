@@ -116,6 +116,7 @@ MonoBehaviour:
   treeHealth: 2
   logs: {fileID: 4669792877117904, guid: e7fefe1574a97bc4d9ebe6ee947ad595, type: 2}
   coconut: {fileID: 4991363439203798, guid: 1a8b6500925013a468b54fbdf961aada, type: 2}
+  fallingSound: 
   speed: 8
   rbTree: {fileID: 0}
 --- !u!136 &136622524475606988

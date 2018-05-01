@@ -55,8 +55,8 @@ public class PickUp : MonoBehaviour {
 
     public bool canHold = true;
     public GameObject item;
-    public GameObject tempParent;
-    public Transform guide;
+    private GameObject tempParent;
+    private Transform guide;
     public bool isHolding = false;
     float distance;
 
@@ -70,7 +70,6 @@ public class PickUp : MonoBehaviour {
  void Start () {
     FirstPersonController temp;
     temp = FindObjectOfType<FirstPersonController>();
-    Debug.Log(temp);
     tempParent = temp.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
     guide = tempParent.transform;
 }

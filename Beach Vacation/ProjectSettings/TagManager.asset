@@ -27,6 +27,7 @@ TagManager:
   - axe
   - Guide
   - Creature
+  - Tutorial
   layers:
   - Default
   - TransparentFX

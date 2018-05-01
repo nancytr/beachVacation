@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTexture: {fileID: 2800000, guid: e0bda24b16fd04b3a94d34b5da1ac6b7, type: 3}
-  type: 
+  type: Craftable
   properties: {fileID: 0}
 --- !u!114 &114293996803302174
 MonoBehaviour:
@@ -168,8 +168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canHold: 1
   item: {fileID: 1808684192613188}
-  tempParent: {fileID: 0}
-  guide: {fileID: 0}
   isHolding: 0
 --- !u!114 &114796168537946692
 MonoBehaviour:
