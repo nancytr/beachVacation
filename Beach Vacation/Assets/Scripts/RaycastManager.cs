@@ -26,6 +26,11 @@ public class RaycastManager : MonoBehaviour
     public bool hasSwung = false;
     public bool IsLookingAtTree = false;
 
+
+    // Creature stuff?
+    [SerializeField] private CreatureController creatureController;
+    public bool IsLookingAtCreature = false;
+
     // Axe stuff
     [SerializeField] private Transform axe;
 
@@ -92,6 +97,22 @@ public class RaycastManager : MonoBehaviour
                 //hasSwung = false;
             }
 
+            if (hit.collider.gameObject.tag == "Creature")
+            {
+                IsLookingAtCreature = true;
+                //Debug.Log(" OMG a treeee");
+                creatureController = GameObject.Find(hit.collider.gameObject.name).GetComponent<CreatureController>();
+                armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
+                //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
+                //Debug.Log(theArmAnimation.hasSwung);
+                if (hasSwung)
+                {
+                    // Debug.Log("yayayayay i swung");
+                    creatureController.creatureHealth -= 1;
+                }
+                //hasSwung = false;
+            }
+
             if (hit.collider.gameObject.tag == "axe")
             {
                 raycastedObj = hit.collider.gameObject;
@@ -140,6 +161,7 @@ public class RaycastManager : MonoBehaviour
             // item name back to normal
             itemNameText.text = null;
             IsLookingAtTree = false;
+            IsLookingAtCreature = false;
         }
         hasSwung = false;
 
