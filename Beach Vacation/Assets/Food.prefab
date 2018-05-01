@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 33170128831927356}
   - component: {fileID: 65061108319442826}
   - component: {fileID: 23123575584346184}
+  - component: {fileID: 114844592531779772}
+  - component: {fileID: 114365240888123610}
   - component: {fileID: 114300458571012272}
   - component: {fileID: 54009280294715398}
-  - component: {fileID: 114365240888123610}
-  - component: {fileID: 114844592531779772}
   m_Layer: 8
   m_Name: Food
   m_TagString: Consumable

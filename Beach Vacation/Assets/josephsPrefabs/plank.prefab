@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a867d3c92766497bb51afc6d92b65fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemTexture: {fileID: 2800000, guid: 1e6d3f695fdc04df597b260e92aef0d2, type: 3}
+  itemTexture: {fileID: 2800000, guid: e0bda24b16fd04b3a94d34b5da1ac6b7, type: 3}
   type: 
   properties: {fileID: 0}
 --- !u!114 &114293996803302174
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e482bb6664a194f86dd3115c73c4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: planck
+  itemName: plank
   food: 0
   water: 0
   health: 0
@@ -192,3 +192,5 @@ MonoBehaviour:
   value: 0
   sleepController: {fileID: 0}
   timeController: {fileID: 0}
+  eatingSound: 
+  drinkingSound: 

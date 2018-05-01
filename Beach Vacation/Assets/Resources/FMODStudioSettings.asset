@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD Stuff/Audio/Audio.fspro
-  SourceProjectPathUnformatted: Assets/FMOD Stuff/Audio/Audio.fspro
-  SourceBankPathUnformatted: Assets/FMOD Stuff/Audio/Build
+  sourceProjectPath: 
+  SourceProjectPathUnformatted: 
+  SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   - Platform: 1
     Value: 1
   - Platform: 2
-    Value: 1
+    Value: 0
   OverlaySettings:
   - Platform: 1
     Value: 1
@@ -41,9 +41,7 @@ MonoBehaviour:
     Value: 1
   - Platform: 2
     Value: 0
-  BankDirectorySettings:
-  - Platform: 2
-    Value: Desktop
+  BankDirectorySettings: []
   VirtualChannelSettings:
   - Platform: 1
     Value: 1024
@@ -55,5 +53,5 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBank: Master Bank
+  MasterBank: 
   Banks: []

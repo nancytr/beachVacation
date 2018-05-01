@@ -11512,7 +11512,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1255884481358774, guid: 0b627e433fd524c71984f4e14ca13c91, type: 2}
       propertyPath: m_Name
-      value: Craftable Item 1
+      value: Craftable Campfire
       objectReference: {fileID: 0}
     - target: {fileID: 114841328528449434, guid: 0b627e433fd524c71984f4e14ca13c91,
         type: 2}
@@ -30455,7 +30455,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1255884481358774, guid: 0b627e433fd524c71984f4e14ca13c91, type: 2}
       propertyPath: m_Name
-      value: Craftable Item 2
+      value: Craftable Plank
       objectReference: {fileID: 0}
     - target: {fileID: 114841328528449434, guid: 0b627e433fd524c71984f4e14ca13c91,
         type: 2}
@@ -47335,16 +47335,6 @@ Prefab:
     - target: {fileID: 4352119934831038, guid: 32dffeaf645a98441955242faa54dc97, type: 2}
       propertyPath: m_RootOrder
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 114293996803302174, guid: 32dffeaf645a98441955242faa54dc97,
-        type: 2}
-      propertyPath: tempParent
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114293996803302174, guid: 32dffeaf645a98441955242faa54dc97,
-        type: 2}
-      propertyPath: guide
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32dffeaf645a98441955242faa54dc97, type: 2}
