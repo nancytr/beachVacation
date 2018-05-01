@@ -1,24 +1,57 @@
 fileFormatVersion: 2
-guid: f335e7b36ea4d40eb9da61889bca08aa
-timeCreated: 1525194600
+guid: 1f5a36c6f00fc1240bbb3340bef014fa
+timeCreated: 1525198811
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: default
-    400000: //RootNode
-    400002: default
-    2100000: defaultMat
-    2300000: default
-    3300000: default
-    4300000: default
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: defaultMat
-    second: {fileID: 2100000, guid: cf8e8af69bf35470db22d5fd19240596, type: 2}
+    100000: joint1
+    100002: joint2
+    100004: joint3
+    100006: joint4
+    100008: joint5
+    100010: joint6
+    100012: joint7
+    100014: L_backFoot
+    100016: L_backKnee
+    100018: L_backShoulder
+    100020: L_foot
+    100022: L_knee
+    100024: L_shoulder
+    100026: Llama_low:Group54271
+    100028: //RootNode
+    100030: R_backFoot
+    100032: R_backKnee
+    100034: R_backShoulder
+    100036: R_foot
+    100038: R_knee
+    100040: R_shoulder
+    400000: joint1
+    400002: joint2
+    400004: joint3
+    400006: joint4
+    400008: joint5
+    400010: joint6
+    400012: joint7
+    400014: L_backFoot
+    400016: L_backKnee
+    400018: L_backShoulder
+    400020: L_foot
+    400022: L_knee
+    400024: L_shoulder
+    400026: Llama_low:Group54271
+    400028: //RootNode
+    400030: R_backFoot
+    400032: R_backKnee
+    400034: R_backShoulder
+    400036: R_foot
+    400038: R_knee
+    400040: R_shoulder
+    2100000: Llama_low_defaultMat1
+    4300000: Llama_low:Group54271
+    9500000: //RootNode
+    13700000: Llama_low:Group54271
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -48,7 +81,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.4
+    globalScale: 50
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -92,7 +125,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

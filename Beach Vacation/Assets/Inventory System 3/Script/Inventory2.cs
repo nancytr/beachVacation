@@ -11,6 +11,7 @@ public class Inventory2 : MonoBehaviour {
 	private Transform[] slot2;
 	public GameObject slotHolder;
 	private bool pickedUpItem;
+    private bool isMouseDisabled;
 	//public GameObject disableManager;
 	[SerializeField] private DisableManager disableManager;
 
@@ -22,15 +23,27 @@ public class Inventory2 : MonoBehaviour {
 	{
 		GetAllSlots();
 		disableManager = GameObject.FindGameObjectWithTag("DisableController").GetComponent<DisableManager>();
+        isMouseDisabled = false;
 		
 
 	}
 
 	public void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.I))
-				inventory2Enabled = !inventory2Enabled;
-				//disableManager.DisablePlayer();
+        if (Input.GetKeyDown(KeyCode.I) && !isMouseDisabled)
+        {
+                disableManager.DisablePlayer();
+                inventory2Enabled = !inventory2Enabled;
+                //disableManager.DisablePlayer();
+                isMouseDisabled = true;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.I) && isMouseDisabled)
+        {
+            disableManager.EnablePlayer();
+            inventory2Enabled = !inventory2Enabled;
+            isMouseDisabled = false;
+        }
 
 		if (inventory2Enabled)
 		{
