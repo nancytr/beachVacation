@@ -21,6 +21,7 @@ public class ItemProperties : MonoBehaviour {
     // sound variables
     [FMODUnity.EventRef]
     public string eatingSound;
+    [FMODUnity.EventRef]
     public string drinkingSound;
 
     void Start()

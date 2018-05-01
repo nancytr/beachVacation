@@ -1360,6 +1360,8 @@ MonoBehaviour:
   value: 2
   sleepController: {fileID: 0}
   timeController: {fileID: 0}
+  eatingSound: event:/Eating
+  drinkingSound: event:/Drinking
 --- !u!135 &135003457955388522
 SphereCollider:
   m_ObjectHideFlags: 1

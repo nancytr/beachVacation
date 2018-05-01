@@ -44,6 +44,8 @@ public class PlayerVitals : MonoBehaviour
     public bool fatStage3 = true;
 
 
+
+
     [Header("Temperature Settings")]
     //public float freezingTemp;
     //public float currentTemp;
@@ -74,6 +76,8 @@ public class PlayerVitals : MonoBehaviour
 
         staminaFallRate = 1;
         staminaRegainRate = 1;
+
+        healthLow = maxHealth * .3f; 
 
         charController = GetComponent<CharacterController>();
         playerController = GetComponent<FirstPersonController>();
@@ -165,8 +169,6 @@ public class PlayerVitals : MonoBehaviour
         }
 
         // Checks if character is hurt enough to trigger hurting audio
-
-        healthLow = maxHealth * .3f; 
 
         if (healthSlider.value <= healthLow)
         {

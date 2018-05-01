@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23838386, g: 0.14934748, b: 0.292301, a: 1}
+  m_IndirectSpecularColor: {r: 0.238377, g: 0.14933854, b: 0.2922928, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3724,7 +3724,6 @@ MonoBehaviour:
   m_JumpSound: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   landingSound: event:/Landing
-  musicSystem: {fileID: 1218424224}
 --- !u!143 &131524106
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3796,6 +3795,7 @@ MonoBehaviour:
   timeController: {fileID: 1155352669}
   playerVitals: {fileID: 131524116}
   lightSafety: {fileID: 1459141573}
+  nightHurt: event:/Night Hurt
   damageRate: 0.7
 --- !u!95 &131524111
 Animator:
@@ -3827,6 +3827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastManager: {fileID: 131524109}
   hasSwung: 0
+  hittingSound: event:/Tree Hitting
 --- !u!114 &131524113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5220,6 +5221,8 @@ MonoBehaviour:
   value: 0
   sleepController: {fileID: 1323626961}
   timeController: {fileID: 1155352669}
+  eatingSound: 
+  drinkingSound: 
 --- !u!1001 &173288398
 Prefab:
   m_ObjectHideFlags: 0
@@ -8393,6 +8396,7 @@ MonoBehaviour:
   - {fileID: 1808684192613188, guid: 32dffeaf645a98441955242faa54dc97, type: 2}
   itemManager: {fileID: 1085765274}
   playerChar: {fileID: 131524102}
+  craftingSound: 
 --- !u!1 &278257544
 GameObject:
   m_ObjectHideFlags: 0
@@ -9231,6 +9235,8 @@ MonoBehaviour:
   value: 2
   sleepController: {fileID: 1323626961}
   timeController: {fileID: 1155352669}
+  eatingSound: 
+  drinkingSound: 
 --- !u!1001 &316671480
 Prefab:
   m_ObjectHideFlags: 0
@@ -27686,6 +27692,7 @@ MonoBehaviour:
   - {fileID: 1403347772331324, guid: e7fefe1574a97bc4d9ebe6ee947ad595, type: 2}
   itemManager: {fileID: 1085765274}
   playerChar: {fileID: 131524102}
+  craftingSound: 
 --- !u!1001 &960886646
 Prefab:
   m_ObjectHideFlags: 0
@@ -28593,6 +28600,8 @@ MonoBehaviour:
   value: 0
   sleepController: {fileID: 1323626961}
   timeController: {fileID: 1155352669}
+  eatingSound: 
+  drinkingSound: 
 --- !u!23 &982856465
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35728,6 +35737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: event:/Music/Music
+  lowHealthSound: event:/Hurt
+  death: event:/Death
 --- !u!1001 &1218607358
 Prefab:
   m_ObjectHideFlags: 0

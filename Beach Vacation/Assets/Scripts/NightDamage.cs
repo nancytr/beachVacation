@@ -8,6 +8,8 @@ public class NightDamage : MonoBehaviour {
     [SerializeField] private Player playerVitals;
     [SerializeField] private LightSafety lightSafety;
 
+    [FMODUnity.EventRef]
+    public string nightHurt;
 
     public float damageRate;
 
@@ -22,6 +24,7 @@ public class NightDamage : MonoBehaviour {
         if (timeController.isNight && !lightSafety.nearFire)
         {
             playerVitals.healthSlider.value -= 20f;
+            FMODUnity.RuntimeManager.PlayOneShot(nightHurt);
         }
     }
 
