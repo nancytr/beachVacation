@@ -34,6 +34,12 @@ public class RaycastManager : MonoBehaviour
     // Axe stuff
     [SerializeField] private Transform axe;
 
+    [FMODUnity.EventRef]
+    public string hitSound;
+    [FMODUnity.EventRef]
+    public string hurtSound;
+    private Transform creatureTransform;
+
     void Start()
     {
         theArmAnimation = armAnim.GetBehaviour<exit>();
@@ -103,12 +109,18 @@ public class RaycastManager : MonoBehaviour
                 //Debug.Log(" OMG a treeee");
                 creatureController = GameObject.Find(hit.collider.gameObject.name).GetComponent<CreatureController>();
                 armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
+                creatureTransform = GameObject.Find(hit.collider.gameObject.name).GetComponent<Transform>();
+                var creatureVector = new Vector3 (creatureTransform.position.x, creatureTransform.position.y, creatureTransform.position.z);
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
                 //Debug.Log(theArmAnimation.hasSwung);
                 if (hasSwung)
                 {
                     // Debug.Log("yayayayay i swung");
                     creatureController.creatureHealth -= 1;
+
+                    FMODUnity.RuntimeManager.PlayOneShot(hitSound);
+                    FMODUnity.RuntimeManager.PlayOneShot(hurtSound, creatureVector);
+
                 }
                 //hasSwung = false;
             }
