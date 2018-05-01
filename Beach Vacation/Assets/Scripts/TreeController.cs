@@ -46,8 +46,8 @@ public class TreeController : MonoBehaviour {
 
         Vector3 position = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f));
         Instantiate(logs, this.transform.position + new Vector3(0, 0, 0) + position, this.transform.rotation);
-        Instantiate(logs, this.transform.position + new Vector3(1, 1, 0) + position, this.transform.rotation);
-        Instantiate(logs, this.transform.position + new Vector3(2, 2, 0) + position, this.transform.rotation);
+        // Instantiate(logs, this.transform.position + new Vector3(1, 1, 0) + position, this.transform.rotation);
+        // Instantiate(logs, this.transform.position + new Vector3(2, 2, 0) + position, this.transform.rotation);
 
         Destroy(gameObject);
         Destroy(this);
