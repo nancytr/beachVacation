@@ -9,6 +9,8 @@ public class DisableManager : MonoBehaviour
     // Use this for initialization
     [SerializeField] private FirstPersonController fpsController;
 
+
+
     public void DisablePlayer()
     {
         fpsController.enabled = false;

@@ -3780,6 +3780,8 @@ MonoBehaviour:
   rightArm: {fileID: 0}
   hasSwung: 0
   IsLookingAtTree: 0
+  creatureController: {fileID: 0}
+  IsLookingAtCreature: 0
   axe: {fileID: 4839775266755982, guid: 286be706ac7328e49a9dfc68eb718e1b, type: 2}
 --- !u!114 &131524110
 MonoBehaviour:
@@ -3868,7 +3870,7 @@ MonoBehaviour:
   inventory2: {fileID: 2034241794}
   itemManager: {fileID: 1085765274}
   slotHolder: {fileID: 1328508712}
-  disableManager: {fileID: 16689900}
+  disableManager: {fileID: 16689902}
 --- !u!114 &131524116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47174,12 +47176,12 @@ Prefab:
         type: 2}
       propertyPath: tempParent
       value: 
-      objectReference: {fileID: 1479767125}
+      objectReference: {fileID: 0}
     - target: {fileID: 114293996803302174, guid: 32dffeaf645a98441955242faa54dc97,
         type: 2}
       propertyPath: guide
       value: 
-      objectReference: {fileID: 1479767126}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32dffeaf645a98441955242faa54dc97, type: 2}
   m_IsPrefabParent: 0

@@ -11,7 +11,8 @@ public class Inventory2 : MonoBehaviour {
 	private Transform[] slot2;
 	public GameObject slotHolder;
 	private bool pickedUpItem;
-	public GameObject disableManager;
+	//public GameObject disableManager;
+	[SerializeField] private DisableManager disableManager;
 
     Color brown = new Color(146, 110, 80);
     Color white = new Color(255, 255, 255);
@@ -20,12 +21,16 @@ public class Inventory2 : MonoBehaviour {
 	public void Start()
 	{
 		GetAllSlots();
+		disableManager = GameObject.FindGameObjectWithTag("DisableController").GetComponent<DisableManager>();
+		
+
 	}
 
 	public void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.I))
 				inventory2Enabled = !inventory2Enabled;
+				//disableManager.DisablePlayer();
 
 		if (inventory2Enabled)
 		{
@@ -33,14 +38,16 @@ public class Inventory2 : MonoBehaviour {
      			inventory2.GetComponent<CanvasGroup>().blocksRaycasts = false;
 				
 				// inventory2.SetActive(true);
-				// disableManager.GetComponent<DisableManager>().DisablePlayer();
+				//disableManager.GetComponent<DisableManager>().DisablePlayer();
+				//disableManager.DisablePlayer();
 		}
 		else
 				inventory2.GetComponent<CanvasGroup>().alpha = 0f; 
      			inventory2.GetComponent<CanvasGroup>().blocksRaycasts = true;
 				
 				// inventory2.SetActive(false);
-				// disableManager.GetComponent<DisableManager>().EnablePlayer();
+				//disableManager.GetComponent<DisableManager>().EnablePlayer();
+				//disableManager.EnablePlayer();
 
 
 		//check for slots

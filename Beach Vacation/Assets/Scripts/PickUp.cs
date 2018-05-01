@@ -47,7 +47,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityStandardAssets.Characters.FirstPerson;
 public class PickUp : MonoBehaviour {
 
 
@@ -66,6 +66,14 @@ public class PickUp : MonoBehaviour {
 //  }
 
  // Update is called once per frame
+ 
+ void Start () {
+    FirstPersonController temp;
+    temp = FindObjectOfType<FirstPersonController>();
+    Debug.Log(temp);
+    tempParent = temp.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+    guide = tempParent.transform;
+}
  void Update () {
 
         distance = Vector3.Distance(item.transform.position, guide.transform.position);
