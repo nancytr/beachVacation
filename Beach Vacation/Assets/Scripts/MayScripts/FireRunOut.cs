@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireRunOut : MonoBehaviour {
 
     [SerializeField] private FireObject fireObject;
+    [SerializeField] private LightSafety lightSafety;
     private float lightSpeed = 0.15f;
     public int flameDuration = 45;
 
@@ -22,6 +23,7 @@ public class FireRunOut : MonoBehaviour {
         {
             fireObject.fireFlame.SetActive(false);
             fireObject.light.enabled = false;
+            lightSafety.nearFire = false;
         }
     }
 
