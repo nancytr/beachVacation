@@ -55,8 +55,8 @@ public class PickUp : MonoBehaviour {
 
     public bool canHold = true;
     public GameObject item;
-    private GameObject tempParent;
-    private Transform guide;
+    public GameObject tempParent;
+    public Transform guide;
     public bool isHolding = false;
     float distance;
 

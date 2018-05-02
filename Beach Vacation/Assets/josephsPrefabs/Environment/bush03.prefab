@@ -22,9 +22,13 @@ GameObject:
   - component: {fileID: 193518966317094584}
   - component: {fileID: 33060635364714556}
   - component: {fileID: 23408880710717114}
-  m_Layer: 0
+  - component: {fileID: 114328239774507370}
+  - component: {fileID: 54693355424452154}
+  - component: {fileID: 135400814469828928}
+  - component: {fileID: 65757705369847516}
+  m_Layer: 8
   m_Name: bush03
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +88,70 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1387694344140458}
   m_Mesh: {fileID: 4305580, guid: 9c74caa742791864f9c678287121e6c9, type: 2}
+--- !u!54 &54693355424452154
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387694344140458}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &65757705369847516
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387694344140458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.86, z: 1.73}
+  m_Center: {x: -0.038321555, y: 1.11, z: -0.038678855}
+--- !u!114 &114328239774507370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387694344140458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e482bb6664a194f86dd3115c73c4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bush
+  food: 0
+  water: 0
+  health: 0
+  bush: 1
+  craftable: 0
+  sleepingBag: 0
+  equippable: 0
+  value: 0
+  sleepController: {fileID: 0}
+  timeController: {fileID: 0}
+  eatingSound: 
+  drinkingSound: 
+  leaves: {fileID: 4280709720318842, guid: e1b12e61bb96dea468becff90e0da321, type: 2}
+--- !u!135 &135400814469828928
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387694344140458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.22
+  m_Center: {x: -0.038321555, y: 0.38011467, z: -0.038678855}
 --- !u!193 &193518966317094584
 Tree:
   m_ObjectHideFlags: 1

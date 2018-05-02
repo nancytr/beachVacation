@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 65670120848576390}
   m_Layer: 0
   m_Name: Raw Meat Pickup
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964316890003132}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 107.669014, y: 2.49, z: 151.42583}
+  m_LocalPosition: {x: 95.35801, y: 2.2547762, z: 156.7934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4402722113334106}
@@ -157,8 +157,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.94, y: 1.21, z: 1.75}
-  m_Center: {x: 0, y: 0.33, z: 0}
+  m_Size: {x: 2.81, y: 2.23, z: 2.42}
+  m_Center: {x: -0.05, y: 1.24, z: 0}
 --- !u!114 &114365750961871684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a867d3c92766497bb51afc6d92b65fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemTexture: {fileID: 0}
+  itemTexture: {fileID: 2800000, guid: 5b54442fb9a3742a0b94b396fb3755d8, type: 3}
   type: 
   properties: {fileID: 0}
 --- !u!114 &114601226983434478
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ae9992e1a194e88991a4d1644d9b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rootItem: {fileID: 1395073128860216, guid: 5b939e5a33edb4b4ab6cabb8cba55378, type: 2}
+  rootItem: {fileID: 1964316890003132}
   pickedUp: 0
 --- !u!114 &114731402147260082
 MonoBehaviour:

@@ -143,12 +143,16 @@ MonoBehaviour:
   food: 0
   water: 0
   health: 0
+  bush: 0
   craftable: 1
   sleepingBag: 0
   equippable: 0
   value: 0
   sleepController: {fileID: 0}
   timeController: {fileID: 0}
+  eatingSound: 
+  drinkingSound: 
+  leaves: {fileID: 0}
 --- !u!114 &114551652002271150
 MonoBehaviour:
   m_ObjectHideFlags: 1
