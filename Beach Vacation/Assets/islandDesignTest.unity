@@ -3783,6 +3783,9 @@ MonoBehaviour:
   creatureController: {fileID: 0}
   IsLookingAtCreature: 0
   axe: {fileID: 4839775266755982, guid: 286be706ac7328e49a9dfc68eb718e1b, type: 2}
+  chopSound: event:/Chopping
+  hitSound: event:/Hit
+  hurtSound: event:/Llama Hurt
 --- !u!114 &131524110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3829,7 +3832,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastManager: {fileID: 131524109}
   hasSwung: 0
-  hittingSound: event:/Tree Hitting
+  hitSound: event:/Hit
+  chopSound: event:/Chopping
+  hurtSound: event:/Llama Hurt
 --- !u!114 &131524113
 MonoBehaviour:
   m_ObjectHideFlags: 0

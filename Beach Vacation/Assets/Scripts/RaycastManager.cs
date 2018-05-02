@@ -34,6 +34,7 @@ public class RaycastManager : MonoBehaviour
     // Axe stuff
     [SerializeField] private Transform axe;
 
+    // for audio purposes
     [FMODUnity.EventRef]
     public string chopSound;    
     [FMODUnity.EventRef]
@@ -42,6 +43,8 @@ public class RaycastManager : MonoBehaviour
     public string hurtSound;
     private Transform creatureTransform;
     private Transform treeTransform;
+    private Vector3 treeVector;
+    private Vector3 creatureVector;
 
     void Start()
     {
@@ -99,14 +102,14 @@ public class RaycastManager : MonoBehaviour
                 
                 // for tracking position of tree for 3d audio
                 treeTransform = GameObject.Find(hit.collider.gameObject.name).GetComponent<Transform>();
-                var treeVector = new Vector3 (treeTransform.position.x, treeTransform.position.y, treeTransform.position.z);
+                treeVector = new Vector3 (treeTransform.position.x, treeTransform.position.y, treeTransform.position.z);
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
                 //Debug.Log(theArmAnimation.hasSwung);
                 if (hasSwung)
                 {
                     // Debug.Log("yayayayay i swung");
                     treeController.treeHealth -= 1;
-                    FMODUnity.RuntimeManager.PlayOneShot(chopSound, treeVector);
+                    //FMODUnity.RuntimeManager.PlayOneShot(chopSound, treeVector);
                 }
                 //hasSwung = false;
             }
@@ -120,7 +123,7 @@ public class RaycastManager : MonoBehaviour
                 
                 // for tracking position of creature for 3d audio
                 creatureTransform = GameObject.Find(hit.collider.gameObject.name).GetComponent<Transform>();
-                var creatureVector = new Vector3 (creatureTransform.position.x, creatureTransform.position.y, creatureTransform.position.z);
+                creatureVector = new Vector3 (creatureTransform.position.x, creatureTransform.position.y, creatureTransform.position.z);
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
                 //Debug.Log(theArmAnimation.hasSwung);
                 if (hasSwung)
@@ -128,8 +131,8 @@ public class RaycastManager : MonoBehaviour
                     // Debug.Log("yayayayay i swung");
                     creatureController.creatureHealth -= 1;
 
-                    FMODUnity.RuntimeManager.PlayOneShot(hitSound);
-                    FMODUnity.RuntimeManager.PlayOneShot(hurtSound, creatureVector);
+                    //FMODUnity.RuntimeManager.PlayOneShot(hitSound);
+                    //FMODUnity.RuntimeManager.PlayOneShot(hurtSound, creatureVector);
 
                 }
                 //hasSwung = false;

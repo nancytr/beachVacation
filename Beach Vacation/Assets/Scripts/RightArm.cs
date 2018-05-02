@@ -9,17 +9,23 @@ public class RightArm : MonoBehaviour
     public bool hasSwung = false;
 
     [FMODUnity.EventRef]
-    public string hittingSound;
+    public string hitSound;
     [FMODUnity.EventRef]
     public string chopSound;
     [FMODUnity.EventRef]
     public string hurtSound;
 
     Animator anim;
+
+    //private RaycastManager raycast;
+    //private Vector3 treeLoc;
+    //private Vector3 creatureLoc;
+
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -31,6 +37,8 @@ public class RightArm : MonoBehaviour
 
             anim.SetBool("IsSwinging", true);
             //anim.SetTrigger("Swing");
+
+            Invoke("ChopSound", 1.6f);
         }
 
         else if (Input.GetMouseButtonDown(0) && (raycastManager.IsLookingAtCreature))
@@ -38,6 +46,7 @@ public class RightArm : MonoBehaviour
             
             anim.SetTrigger("IsSwinging");
 
+            Invoke("HitSound", 1.6f);
         }
 
         else if (Input.GetMouseButton(0) && !raycastManager.IsLookingAtTree)
@@ -45,12 +54,22 @@ public class RightArm : MonoBehaviour
             //anim.SetBool("IsSwinging", false);
             anim.SetTrigger("Swing");
             
-            // FMODUnity.RuntimeManager.PlayOneShot(chopSound, treeVector);
+
         }
 
         else
         {
             anim.SetBool("IsSwinging", false);
         }
+    }
+
+    void HitSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(hitSound);
+    }
+
+    void ChopSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(chopSound);
     }
 }
