@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 19370486}
   - component: {fileID: 3302532}
   - component: {fileID: 2319546}
-  m_Layer: 0
+  - component: {fileID: 114608525557457652}
+  m_Layer: 8
   m_Name: bush02
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2825,3 +2826,28 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 199470}
   m_IsPrefabParent: 1
+--- !u!114 &114608525557457652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e482bb6664a194f86dd3115c73c4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bush
+  food: 0
+  water: 0
+  health: 0
+  bush: 1
+  craftable: 0
+  sleepingBag: 0
+  equippable: 0
+  value: 0
+  sleepController: {fileID: 0}
+  timeController: {fileID: 0}
+  eatingSound: 
+  drinkingSound: 
+  leaves: {fileID: 4280709720318842, guid: e1b12e61bb96dea468becff90e0da321, type: 2}

@@ -10,6 +10,7 @@ public class ItemProperties : MonoBehaviour {
     [SerializeField] private bool food;
     [SerializeField] private bool water;
     [SerializeField] private bool health;
+    [SerializeField] private bool bush;
     [SerializeField] public bool craftable;
     [SerializeField] private bool sleepingBag;
     [SerializeField] private bool equippable;
@@ -23,6 +24,9 @@ public class ItemProperties : MonoBehaviour {
     public string eatingSound;
     [FMODUnity.EventRef]
     public string drinkingSound;
+
+    //bush stuff
+    [SerializeField] private Transform leaves;
 
     void Start()
     {
@@ -55,6 +59,14 @@ public class ItemProperties : MonoBehaviour {
             this.gameObject.SetActive(false);
         }
 
+        else if (bush)
+        {
+            //this.gameObject.SetActive(false);
+            Vector3 position = new Vector3(0, 0, 0);
+            Instantiate(leaves, this.transform.position + new Vector3(0, 0, 0) + position, this.transform.rotation);
+            this.gameObject.SetActive(false);
+        }
+
         else if (sleepingBag)
         {
             if (timeController.isNight)
@@ -67,6 +79,7 @@ public class ItemProperties : MonoBehaviour {
                 StartCoroutine(byeUI());
             }
         }
+
     }
 
     IEnumerator byeUI()

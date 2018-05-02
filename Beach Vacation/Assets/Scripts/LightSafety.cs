@@ -5,6 +5,8 @@ using UnityEngine;
 public class LightSafety : MonoBehaviour {
 
     public bool nearFire;
+    [SerializeField] ItemProperties itemProperties;
+    [SerializeField] FireRunOut fireRunout;
 
 	// Use this for initialization
 	void OnTriggerEnter(Collider collision)
@@ -12,6 +14,16 @@ public class LightSafety : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {      
             nearFire = true;
+        }
+
+        if (collision.gameObject.tag == "Item")
+        {
+            if (itemProperties.itemName == ("Wood"))
+            {
+                
+                Destroy(collision.gameObject);
+                fireRunout.increaseFire();
+            }
         }
     }
 
