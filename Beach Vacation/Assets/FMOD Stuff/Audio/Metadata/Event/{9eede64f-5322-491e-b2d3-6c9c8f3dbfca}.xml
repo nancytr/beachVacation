@@ -90,7 +90,10 @@
     <object class="MixerBusPanner" id="{0b4bbbca-77e5-48db-909e-307cfcda2e19}"/>
     <object class="SingleSound" id="{4fe58566-b3c4-45cc-819b-a2b9ac8bb0c7}">
         <property name="length">
-            <value>0.5</value>
+            <value>0.45999999999999996</value>
+        </property>
+        <property name="timelockedOffset">
+            <value>0.040000000000000001</value>
         </property>
         <relationship name="audioFile">
             <destination>{9416c3e9-f803-44c3-9ca6-44154fab92c6}</destination>
@@ -113,6 +116,7 @@
     <object class="MixerBusEffectChain" id="{9545a891-7fb1-4f15-97cb-adffb377889a}">
         <relationship name="effects">
             <destination>{d60e90b0-3f9d-449b-b308-b6ffa72d3535}</destination>
+            <destination>{736b1604-03d4-488f-a1f2-b49751fef9c8}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{0c6b59b5-3481-475a-bc11-cec36a4ec26c}"/>
@@ -124,5 +128,34 @@
     </object>
     <object class="MixerBusPanner" id="{753335cc-d7a2-4e80-9982-e24311769a67}"/>
     <object class="MixerBusFader" id="{d60e90b0-3f9d-449b-b308-b6ffa72d3535}"/>
+    <object class="MultibandEqEffect" id="{736b1604-03d4-488f-a1f2-b49751fef9c8}">
+        <property name="filterTypeA">
+            <value>9</value>
+        </property>
+        <property name="filterTypeB">
+            <value>9</value>
+        </property>
+        <property name="frequencyA">
+            <value>9407.97559</value>
+        </property>
+        <property name="frequencyB">
+            <value>677.211731</value>
+        </property>
+        <property name="frequencyC">
+            <value>6894.82324</value>
+        </property>
+        <property name="qualityA">
+            <value>0.644206941</value>
+        </property>
+        <property name="qualityC">
+            <value>0.100000001</value>
+        </property>
+        <property name="gainA">
+            <value>-6.72413635</value>
+        </property>
+        <property name="gainB">
+            <value>-14.4827595</value>
+        </property>
+    </object>
     <object class="MixerBusFader" id="{a78925bc-4d15-4a5f-98d9-068408b9eeb2}"/>
 </objects>

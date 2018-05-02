@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour {
 
-    private bool tutorialActive;
+    private bool tutorialActive = true;
 
 
 	void Start () 
@@ -14,16 +14,21 @@ public class Tutorial : MonoBehaviour {
 	
 	void Update () 
     {
-        if (Input.GetKey(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            tutorialActive = true;
-            this.GetComponent<CanvasGroup>().alpha = 1f;
+            tutorialActive = !tutorialActive;
+            
 
+        }
+
+        if (tutorialActive)
+        {
+            this.GetComponent<CanvasGroup>().alpha = 1f;
         }
         else
         {
-            tutorialActive = false;
             this.GetComponent<CanvasGroup>().alpha = 0f;
         }
-	}
+    
+    }
 }

@@ -11,11 +11,12 @@ public class CreatureController : MonoBehaviour {
     [SerializeField] public static GameObject tree = null;
 
     [FMODUnity.EventRef]
-    public string fallingSound;
+    public string hurtSound;
 
     [SerializeField] public int speed = 8;
 
     public Rigidbody rbTree;
+    public Vector3 llamaVector;
 
     // Use this for initialization
     void Start () {
@@ -27,6 +28,8 @@ public class CreatureController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        llamaVector = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
+        
         if (creatureHealth <= 0)
         {
             rbTree.isKinematic = false;
@@ -34,7 +37,7 @@ public class CreatureController : MonoBehaviour {
             rbTree.AddForce(transform.forward * speed);
             StartCoroutine(destroyTree());
 
-            FMODUnity.RuntimeManager.PlayOneShot(fallingSound);
+            FMODUnity.RuntimeManager.PlayOneShot(hurtSound);
         }
 	}
 

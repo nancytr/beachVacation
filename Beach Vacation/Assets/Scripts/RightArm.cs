@@ -32,24 +32,25 @@ public class RightArm : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && (raycastManager.IsLookingAtTree))
+        if (Input.GetMouseButtonDown(1) && (raycastManager.IsLookingAtTree))
         {
 
             anim.SetBool("IsSwinging", true);
             //anim.SetTrigger("Swing");
 
-            Invoke("ChopSound", 1.6f);
+            Invoke("ChopSound", .8f);
         }
 
-        else if (Input.GetMouseButtonDown(0) && (raycastManager.IsLookingAtCreature))
+        else if (Input.GetMouseButtonDown(1) && (raycastManager.IsLookingAtCreature))
         {
             
             anim.SetTrigger("IsSwinging");
 
-            Invoke("HitSound", 1.6f);
+            Invoke("HitSound", .8f);
+            Invoke("HurtSound", .8f);
         }
 
-        else if (Input.GetMouseButton(0) && !raycastManager.IsLookingAtTree)
+        else if (Input.GetMouseButton(1) && !raycastManager.IsLookingAtTree)
         {
             //anim.SetBool("IsSwinging", false);
             anim.SetTrigger("Swing");
@@ -71,5 +72,10 @@ public class RightArm : MonoBehaviour
     void ChopSound()
     {
         FMODUnity.RuntimeManager.PlayOneShot(chopSound);
+    }
+
+    void HurtSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(hurtSound, raycastManager.creatureVector);
     }
 }

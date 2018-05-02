@@ -44,8 +44,6 @@ public class PlayerVitals : MonoBehaviour
     public bool fatStage3 = true;
 
 
-
-
     [Header("Temperature Settings")]
     //public float freezingTemp;
     //public float currentTemp;
@@ -172,12 +170,14 @@ public class PlayerVitals : MonoBehaviour
 
         if (healthSlider.value <= healthLow)
         {
-            musicSystem.isLowHealthMusic();
+            Invoke ("PlayHeartbeat", 0f);
         }
         else if (healthSlider.value > healthLow)
         {
-            musicSystem.isNormalHealth();
+            Invoke ("StopHeartbeat", 0f);
         }
+
+
 
         // Hunger Controller
 
@@ -271,5 +271,15 @@ public class PlayerVitals : MonoBehaviour
     {
         // DO SOMETHING HERE! ded
         musicSystem.isDeadMusic();
+    }
+
+    void PlayHeartbeat()
+    {
+        musicSystem.isLowHealthMusic();
+    }
+
+    void StopHeartbeat()
+    {
+        musicSystem.isNormalHealth();
     }
 }

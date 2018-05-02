@@ -43,8 +43,8 @@ public class RaycastManager : MonoBehaviour
     public string hurtSound;
     private Transform creatureTransform;
     private Transform treeTransform;
-    private Vector3 treeVector;
-    private Vector3 creatureVector;
+    public Vector3 treeVector;
+    public Vector3 creatureVector;
 
     void Start()
     {

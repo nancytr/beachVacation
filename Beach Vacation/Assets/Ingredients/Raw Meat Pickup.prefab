@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 65670120848576390}
   m_Layer: 0
   m_Name: Raw Meat Pickup
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,8 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canHold: 1
   item: {fileID: 1964316890003132}
-  tempParent: {fileID: 0}
-  guide: {fileID: 0}
   isHolding: 0
 --- !u!114 &114811684522700026
 MonoBehaviour:

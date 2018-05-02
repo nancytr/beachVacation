@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 65949289732602956}
   m_Layer: 0
   m_Name: Leaf Pickup
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,8 +271,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canHold: 1
   item: {fileID: 1948005543678734}
-  tempParent: {fileID: 0}
-  guide: {fileID: 0}
   isHolding: 0
 --- !u!114 &114701818993546904
 MonoBehaviour:
