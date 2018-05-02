@@ -3783,6 +3783,9 @@ MonoBehaviour:
   creatureController: {fileID: 0}
   IsLookingAtCreature: 0
   axe: {fileID: 4839775266755982, guid: 286be706ac7328e49a9dfc68eb718e1b, type: 2}
+  chopSound: event:/Tree Hitting
+  hitSound: event:/Hit
+  hurtSound: event:/Llama Hurt
 --- !u!114 &131524110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20066,8 +20069,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canHold: 1
   item: {fileID: 715070157}
-  tempParent: {fileID: 1479767125}
-  guide: {fileID: 1479767126}
   isHolding: 0
 --- !u!1001 &715561724
 Prefab:
@@ -31111,8 +31112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canHold: 1
   item: {fileID: 1054311975}
-  tempParent: {fileID: 1479767125}
-  guide: {fileID: 1479767126}
   isHolding: 0
 --- !u!23 &1054311978
 MeshRenderer:

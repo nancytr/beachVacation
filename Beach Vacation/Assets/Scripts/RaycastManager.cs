@@ -35,10 +35,13 @@ public class RaycastManager : MonoBehaviour
     [SerializeField] private Transform axe;
 
     [FMODUnity.EventRef]
+    public string chopSound;    
+    [FMODUnity.EventRef]
     public string hitSound;
     [FMODUnity.EventRef]
     public string hurtSound;
     private Transform creatureTransform;
+    private Transform treeTransform;
 
     void Start()
     {
@@ -93,12 +96,17 @@ public class RaycastManager : MonoBehaviour
                 //Debug.Log(" OMG a treeee");
                 treeController = GameObject.Find(hit.collider.gameObject.name).GetComponent<TreeController>();
                 armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
+                
+                // for tracking position of tree for 3d audio
+                treeTransform = GameObject.Find(hit.collider.gameObject.name).GetComponent<Transform>();
+                var treeVector = new Vector3 (treeTransform.position.x, treeTransform.position.y, treeTransform.position.z);
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
                 //Debug.Log(theArmAnimation.hasSwung);
                 if (hasSwung)
                 {
                     // Debug.Log("yayayayay i swung");
                     treeController.treeHealth -= 1;
+                    FMODUnity.RuntimeManager.PlayOneShot(chopSound, treeVector);
                 }
                 //hasSwung = false;
             }
@@ -109,6 +117,8 @@ public class RaycastManager : MonoBehaviour
                 //Debug.Log(" OMG a treeee");
                 creatureController = GameObject.Find(hit.collider.gameObject.name).GetComponent<CreatureController>();
                 armAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Swing2");
+                
+                // for tracking position of creature for 3d audio
                 creatureTransform = GameObject.Find(hit.collider.gameObject.name).GetComponent<Transform>();
                 var creatureVector = new Vector3 (creatureTransform.position.x, creatureTransform.position.y, creatureTransform.position.z);
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();

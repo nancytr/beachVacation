@@ -10,6 +10,10 @@ public class RightArm : MonoBehaviour
 
     [FMODUnity.EventRef]
     public string hittingSound;
+    [FMODUnity.EventRef]
+    public string chopSound;
+    [FMODUnity.EventRef]
+    public string hurtSound;
 
     Animator anim;
     // Use this for initialization
@@ -40,8 +44,8 @@ public class RightArm : MonoBehaviour
         {
             //anim.SetBool("IsSwinging", false);
             anim.SetTrigger("Swing");
-
-            FMODUnity.RuntimeManager.PlayOneShot(hittingSound);
+            
+            // FMODUnity.RuntimeManager.PlayOneShot(chopSound, treeVector);
         }
 
         else
