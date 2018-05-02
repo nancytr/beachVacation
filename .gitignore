@@ -33,3 +33,9 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Beach Vacation/Assets/FMODStudioCache.asset
+
+
+/Assets/FMODStudioCache.asset
+/Assets/FMODStudioCache.asset.meta
+fmod.log
+fmod_editor.log
