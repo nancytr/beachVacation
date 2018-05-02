@@ -199,8 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canHold: 1
   item: {fileID: 1964316890003132}
-  tempParent: {fileID: 0}
-  guide: {fileID: 0}
   isHolding: 0
 --- !u!114 &114811684522700026
 MonoBehaviour:

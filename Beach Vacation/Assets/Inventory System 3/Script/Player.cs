@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     public MusicControl musicSystem;
+    public FirstPersonController fpsController;
 
     public Slider healthSlider;
     public int maxHealth;
@@ -42,6 +44,11 @@ public class Player : MonoBehaviour
     public bool fatStage1 = true;
     public bool fatStage2 = true;
     public bool fatStage3 = true;
+
+    private bool heartbeat  = false;
+    public bool isDead = false;
+    public CanvasGroup deathCanvas;
+    private bool restartButtonActive;
 
 
     [Header("Temperature Settings")]
@@ -159,22 +166,22 @@ public class Player : MonoBehaviour
             healthSlider.value -= Time.deltaTime / healthFallRate;
         }
 
-        if (healthSlider.value <= 0)
+        if (healthSlider.value <= 0 && !isDead)
         {
-            CharacterDeath();
+            Invoke ("CharacterDeath", 0f);
         }
 
         // Checks if character is hurt enough to trigger hurting audio
 
         healthLow = maxHealth * .3f;
 
-        if (healthSlider.value <= healthLow)
+        if (healthSlider.value <= healthLow && !heartbeat && !isDead)
         {
-            musicSystem.isLowHealthMusic();
+            Invoke ("PlayHeartbeat", 0f);
         }
-        else if (healthSlider.value > healthLow)
+        else if (healthSlider.value > healthLow && heartbeat && !isDead)
         {
-            musicSystem.isNormalHealth();
+            Invoke ("StopHeartbeat", 0f);
         }
 
         // Hunger Controller
@@ -263,11 +270,43 @@ public class Player : MonoBehaviour
         {
             playerController.m_RunSpeed = playerController.m_RunSpeedNorm;
         }
+        
+        if (isDead)
+        {
+            restartButtonActive = true;
+            deathCanvas.alpha = 1f;
+        }
+
+        if (restartButtonActive && Input.GetKeyDown(KeyCode.Return))
+        {
+            isDead = false;
+            SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
+        }
     }
 
     void CharacterDeath()
     {
         // DO SOMETHING HERE! ded
         musicSystem.isDeadMusic();
+        isDead = true;
+
+        FMOD.Studio.Bus playerBus = FMODUnity.RuntimeManager.GetBus("bus:/");
+        playerBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
+        fpsController.enabled = false;
     }
+
+    void PlayHeartbeat()
+    {
+        musicSystem.isLowHealthMusic();
+        heartbeat = true;
+    }
+
+    void StopHeartbeat()
+    {
+        musicSystem.isNormalHealth();
+        heartbeat = false;
+    }
+
+
 }

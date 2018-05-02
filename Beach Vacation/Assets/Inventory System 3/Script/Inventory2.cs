@@ -100,7 +100,7 @@ public class Inventory2 : MonoBehaviour {
 		rootItem = item.GetComponent<ItemPickup2>().rootItem;
 		print(rootItem);
 
-		for(int i = 0; i < 12; i++)
+		for(int i = 0; i < 24; i++)
 		{
 			if(slot2[i].GetComponent<Slot2>().empty == true && item.gameObject.GetComponent<ItemPickup2>().pickedUp == false)
 			{
@@ -127,8 +127,8 @@ public class Inventory2 : MonoBehaviour {
 
 	public void GetAllSlots()
 	{
-		slot2 = new Transform[12];
-		for (int i = 0; i < 12; i++)
+		slot2 = new Transform[24];
+		for (int i = 0; i < 24; i++)
 		{
 			slot2[i] = slotHolder.transform.GetChild(i);
 			// print(slot2[i]);
