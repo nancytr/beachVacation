@@ -81,7 +81,7 @@ public class Inventory2 : MonoBehaviour {
 	public void OnTriggerStay(Collider other)
 	{
         // logic for picking up item by walking over
-		if (other.tag == "Item")
+		if (other.tag == "Item" || other.tag == "Log")
 		{
             if (Input.GetKeyDown(KeyCode.E))
             {

@@ -144,6 +144,7 @@ MonoBehaviour:
   water: 0
   health: 0
   bush: 0
+  burnable: 0
   craftable: 1
   sleepingBag: 0
   equippable: 0
@@ -180,6 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a867d3c92766497bb51afc6d92b65fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemTexture: {fileID: 2800000, guid: 3c34a7090dbca114b8ce4fabc1db75af, type: 3}
+  itemTexture: {fileID: 2800000, guid: 1e6d3f695fdc04df597b260e92aef0d2, type: 3}
   type: Wood
   properties: {fileID: 114508268201444638}

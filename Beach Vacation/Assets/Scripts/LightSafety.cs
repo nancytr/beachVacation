@@ -8,22 +8,24 @@ public class LightSafety : MonoBehaviour {
     [SerializeField] ItemProperties itemProperties;
     [SerializeField] FireRunOut fireRunout;
 
-	// Use this for initialization
-	void OnTriggerEnter(Collider collision)
+    private void Start()
+    {
+        this.GetComponent<ItemProperties> ();
+    }
+
+    // Use this for initialization
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {      
             nearFire = true;
         }
 
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Log")
         {
-            if (itemProperties.itemName == ("Wood"))
-            {
-                
-                Destroy(collision.gameObject);
-                fireRunout.increaseFire();
-            }
+            Destroy(collision.gameObject);
+            fireRunout.increaseFire();
+              
         }
     }
 

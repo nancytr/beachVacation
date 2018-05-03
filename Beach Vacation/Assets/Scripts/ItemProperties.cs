@@ -11,6 +11,7 @@ public class ItemProperties : MonoBehaviour {
     [SerializeField] private bool water;
     [SerializeField] private bool health;
     [SerializeField] private bool bush;
+    [SerializeField] public bool burnable;
     [SerializeField] public bool craftable;
     [SerializeField] private bool sleepingBag;
     [SerializeField] private bool equippable;
@@ -66,6 +67,8 @@ public class ItemProperties : MonoBehaviour {
             Instantiate(leaves, this.transform.position + new Vector3(0, 0, 0) + position, this.transform.rotation);
             this.gameObject.SetActive(false);
         }
+
+
 
         else if (sleepingBag)
         {

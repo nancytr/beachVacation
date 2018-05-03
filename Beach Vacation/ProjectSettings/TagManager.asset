@@ -28,6 +28,8 @@ TagManager:
   - Guide
   - Creature
   - Tutorial
+  - Fire
+  - Log
   layers:
   - Default
   - TransparentFX
