@@ -14,20 +14,26 @@ public class LightSafety : MonoBehaviour {
     }
 
     // Use this for initialization
-    void OnTriggerEnter(Collider collision)
+    void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
-        {      
-            nearFire = true;
-        }
-
-        if (collision.gameObject.tag == "Log")
         {
-            Destroy(collision.gameObject);
-            fireRunout.increaseFire();
-              
+            nearFire = true;
+            
+            
         }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Log")
+        {
+            Destroy(other.gameObject);
+            fireRunout.increaseFire();
+
+        }
+    }
+        
+    
 
     void OnTriggerExit(Collider collision)
     {

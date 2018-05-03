@@ -21,11 +21,15 @@ public class NightDamage : MonoBehaviour {
 
     void IncrementalDamage()
     {
+
+        // if its nighttime, if player is not near fire and if player is not dead:
         if (timeController.isNight && !lightSafety.nearFire && !playerVitals.isDead)
         {
+            //Debug.Log(!lightSafety.nearFire);
             playerVitals.healthSlider.value -= 20f;
             FMODUnity.RuntimeManager.PlayOneShot(nightHurt);
-            print (playerVitals.healthSlider.value);
+            print("i am near a fire?");
+            print(lightSafety.nearFire);
         }
     }
 

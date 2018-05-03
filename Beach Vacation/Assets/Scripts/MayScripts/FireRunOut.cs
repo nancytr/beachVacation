@@ -11,16 +11,16 @@ public class FireRunOut : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+        //lightSafety.nearFire = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //StartCoroutine(FireBurningOut());
         fireObject.light.intensity -= lightSpeed * Time.deltaTime;
-
         if (fireObject.light.intensity <= 2)
         {
+
             fireObject.fireFlame.SetActive(false);
             fireObject.light.enabled = false;
             lightSafety.nearFire = false;
