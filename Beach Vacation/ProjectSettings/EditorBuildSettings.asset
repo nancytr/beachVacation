@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/islandDesignTest.unity
-    guid: cd005fea34e374cd1bc5913b00fdf5d0
-  - enabled: 1
     path: Assets/Main Menu.unity
     guid: b2ef962d066a8e343b41df85637ff822
+  - enabled: 1
+    path: Assets/islandDesignTest.unity
+    guid: cd005fea34e374cd1bc5913b00fdf5d0

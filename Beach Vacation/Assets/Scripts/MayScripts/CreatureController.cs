@@ -37,9 +37,13 @@ public class CreatureController : MonoBehaviour {
         
         if (creatureHealth <= 0)
         {
-            rbTree.isKinematic = false;
-            rbTree.constraints = RigidbodyConstraints.None;
-            rbTree.AddForce(transform.forward * speed);
+            if (!isRock)
+            {
+                rbTree.isKinematic = false;
+                rbTree.constraints = RigidbodyConstraints.None;
+                rbTree.AddForce(transform.forward * speed);
+            }
+            
             StartCoroutine(destroyTree());
 
             // if (isLlama && !soundPlaying)
