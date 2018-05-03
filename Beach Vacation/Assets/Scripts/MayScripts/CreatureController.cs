@@ -12,6 +12,11 @@ public class CreatureController : MonoBehaviour {
 
     [FMODUnity.EventRef]
     public string hurtSound;
+    // [FMODUnity.EventRef]
+    // public string rockSound;
+    public bool isRock = false;
+    public bool isLlama = false;
+    // public bool soundPlaying;
 
     [SerializeField] public int speed = 8;
 
@@ -37,7 +42,16 @@ public class CreatureController : MonoBehaviour {
             rbTree.AddForce(transform.forward * speed);
             StartCoroutine(destroyTree());
 
-            FMODUnity.RuntimeManager.PlayOneShot(hurtSound);
+            // if (isLlama && !soundPlaying)
+            // {
+            //     FMODUnity.RuntimeManager.PlayOneShot(hurtSound, llamaVector);
+            //     Invoke("SoundOff", .6f);
+            // }
+
+            // if (isRock && !soundPlaying)
+            // {
+            //     FMODUnity.RuntimeManager.PlayOneShot(rockSound, llamaVector);
+            // }
         }
 	}
 
@@ -62,4 +76,9 @@ public class CreatureController : MonoBehaviour {
         //Instantiate(coconut, this.transform.position + new Vector3(2, 2, 0) + position, Quaternion.identity);
         //Instantiate(coconut, this.transform.position + new Vector3(5, 5, 0) + position, Quaternion.identity);
     }
+
+    // void SoundOff()
+    // {
+    //     soundPlaying = false;
+    // }
 }

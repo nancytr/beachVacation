@@ -28,7 +28,7 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
 	// public void Update()
 	public void OnPointerDown(PointerEventData PointerEventData)
 	{
-			if (PointerEventData.button == PointerEventData.InputButton.Right)
+			if (PointerEventData.button == PointerEventData.InputButton.Left)
 			{
 				CheckForRequiredItems();
 			}

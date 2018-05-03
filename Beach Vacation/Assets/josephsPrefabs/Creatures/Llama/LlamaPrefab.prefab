@@ -682,9 +682,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureHealth: 3
   DropOnKill: {fileID: 4709450082981234, guid: 23a43ded2c38343fe8c68766376e7b54, type: 2}
-  fallingSound: 
+  hurtSound: event:/Hurt
+  rockSound: event:/Rock Hit
+  isRock: 0
+  isLlama: 1
   speed: 8
   rbTree: {fileID: 0}
+  llamaVector: {x: 0, y: 0, z: 0}
 --- !u!114 &114757528328854130
 MonoBehaviour:
   m_ObjectHideFlags: 1
