@@ -1354,6 +1354,8 @@ MonoBehaviour:
   food: 1
   water: 0
   health: 0
+  bush: 0
+  burnable: 0
   craftable: 0
   sleepingBag: 0
   equippable: 0
@@ -1362,6 +1364,7 @@ MonoBehaviour:
   timeController: {fileID: 0}
   eatingSound: event:/Eating
   drinkingSound: event:/Drinking
+  leaves: {fileID: 0}
 --- !u!135 &135003457955388522
 SphereCollider:
   m_ObjectHideFlags: 1

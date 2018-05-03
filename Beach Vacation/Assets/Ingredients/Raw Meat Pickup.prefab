@@ -199,6 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canHold: 1
   item: {fileID: 1964316890003132}
+  tempParent: {fileID: 0}
+  guide: {fileID: 0}
   isHolding: 0
 --- !u!114 &114811684522700026
 MonoBehaviour:
@@ -215,11 +217,14 @@ MonoBehaviour:
   food: 1
   water: 0
   health: 0
+  bush: 0
+  burnable: 0
   craftable: 0
   sleepingBag: 0
   equippable: 0
-  value: 0
+  value: 15
   sleepController: {fileID: 0}
   timeController: {fileID: 0}
   eatingSound: event:/Eating
   drinkingSound: 
+  leaves: {fileID: 0}

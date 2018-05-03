@@ -17,9 +17,9 @@ public class PlayerVitals : MonoBehaviour
     private bool hurtAudioPlayed;
     private float healthLow;
 
-    public Slider thirstSlider;
-    public int maxThirst;
-    public int thirstFallRate;
+    //public Slider thirstSlider;
+    //public int maxThirst;
+    //public int thirstFallRate;
 
     public Slider hungerSlider;
     public int maxHunger;
@@ -63,8 +63,8 @@ public class PlayerVitals : MonoBehaviour
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
 
-        thirstSlider.maxValue = maxThirst;
-        thirstSlider.value = maxThirst;
+        //thirstSlider.maxValue = maxThirst;
+        //thirstSlider.value = maxThirst;
 
         hungerSlider.maxValue = maxHunger;
         hungerSlider.value = maxHunger;
@@ -90,6 +90,7 @@ public class PlayerVitals : MonoBehaviour
     {
 
         // Fatigue Section
+        /*
         if (fatigueSlider.value <= 60 && fatStage1)
         {
             fatMaxStamina = 80;
@@ -125,6 +126,7 @@ public class PlayerVitals : MonoBehaviour
         {
             fatigueSlider.value = maxFatigue;
         }
+        */
 
         /*
         //Temperature Section
@@ -151,12 +153,14 @@ public class PlayerVitals : MonoBehaviour
         // Health Controller
 
         // Makes health fall fastest. Health and Thirst bars are at zero.
+        /* commenting out thirst penalty
         if (hungerSlider.value <= 0 && (thirstSlider.value <= 0))
         {
             healthSlider.value -= Time.deltaTime / healthFallRate * 2;
         }
+        */
 
-        else if (hungerSlider.value <= 0 || thirstSlider.value <= 0) //|| currentTemp <= freezingTemp || currentTemp >= heatTemp)
+        if (hungerSlider.value <= 0) //|| currentTemp <= freezingTemp || currentTemp >= heatTemp)
         {
             healthSlider.value -= Time.deltaTime / healthFallRate;
         }
@@ -204,6 +208,7 @@ public class PlayerVitals : MonoBehaviour
         // Thirst Controller
 
         // Decrease thirst if player still got liquid in belly
+        /*
         if (thirstSlider.value >= 0)
         {
             thirstSlider.value -= Time.deltaTime / thirstFallRate;
@@ -220,7 +225,9 @@ public class PlayerVitals : MonoBehaviour
         else if (thirstSlider.value >= maxThirst)
         {
             thirstSlider.value = maxThirst;
+            
         }
+        */
 
         // STAMINA CONTROL SECTION
 
