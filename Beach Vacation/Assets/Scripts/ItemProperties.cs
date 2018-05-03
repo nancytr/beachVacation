@@ -49,9 +49,9 @@ public class ItemProperties : MonoBehaviour {
 
         else if (water)
         {
-            playerVitals.thirstSlider.value += value;
-            this.gameObject.SetActive(false);
-            FMODUnity.RuntimeManager.PlayOneShot(drinkingSound);
+            //playerVitals.thirstSlider.value += value;
+            //this.gameObject.SetActive(false);
+            //FMODUnity.RuntimeManager.PlayOneShot(drinkingSound);
         }
 
         else if (health)
