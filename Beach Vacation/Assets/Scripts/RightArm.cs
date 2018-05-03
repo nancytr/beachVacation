@@ -14,6 +14,8 @@ public class RightArm : MonoBehaviour
     public string chopSound;
     [FMODUnity.EventRef]
     public string hurtSound;
+    [FMODUnity.EventRef]
+    public string rockSound;
 
     Animator anim;
 
@@ -46,8 +48,18 @@ public class RightArm : MonoBehaviour
             
             anim.SetTrigger("IsSwinging");
 
-            Invoke("HitSound", .8f);
-            Invoke("HurtSound", .8f);
+            if (raycastManager.llama)
+            {
+                Invoke("HitSound", .8f);
+                Invoke("HurtSound", .8f);
+                print ("llama");
+            }
+            else if (raycastManager.rock)
+            {
+                Invoke("RockSound", .8f);
+                print ("rock");
+
+            }
         }
 
         else if (Input.GetMouseButton(1) && !raycastManager.IsLookingAtTree)
@@ -77,5 +89,10 @@ public class RightArm : MonoBehaviour
     void HurtSound()
     {
         FMODUnity.RuntimeManager.PlayOneShot(hurtSound, raycastManager.creatureVector);
+    }
+
+    void RockSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(rockSound, raycastManager.creatureVector);
     }
 }

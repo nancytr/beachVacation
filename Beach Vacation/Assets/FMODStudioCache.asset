@@ -30,9 +30,10 @@ MonoBehaviour:
   - {fileID: 114491685597128436}
   - {fileID: 114112940511789236}
   - {fileID: 114977550905404990}
+  - {fileID: 114503518477949364}
   MasterBankRef: {fileID: 114375376468641490}
   StringsBankRef: {fileID: 114356730211629218}
-  stringsBankWriteTime: 636608739200910814
+  stringsBankWriteTime: 636609039671247917
   cacheVersion: 2
 --- !u!114 &114001583912477908
 MonoBehaviour:
@@ -234,6 +235,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114056033742561962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDead
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114059598454032240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,8 +422,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114231257138155866}
-  - {fileID: 114652265017034654}
+  - {fileID: 114167288124146844}
+  - {fileID: 114056033742561962}
   MinDistance: 0
   MaxDistance: 0
   Length: 326000
@@ -438,6 +454,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: isDead
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114103844173222024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isNight
   Min: 0
   Max: 1
   Default: 0
@@ -530,6 +561,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114119668807586750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDead
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114122687344212378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +663,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114167288124146844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isNight
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114168433529845582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,6 +714,21 @@ MonoBehaviour:
   Name: isLowHealth
   Min: 0
   Max: 100
+  Default: 0
+--- !u!114 &114182876468089722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDead
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114188197318307028
 MonoBehaviour:
@@ -989,6 +1065,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: isDay
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114246858116237146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDead
   Min: 0
   Max: 1
   Default: 0
@@ -1506,11 +1597,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD Stuff\Audio\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636608739200910814
+  lastModified: 636609039671247917
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1324
+    Value: 1364
   Exists: 1
 --- !u!114 &114357897499702124
 MonoBehaviour:
@@ -1613,11 +1704,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\herct\Documents\GitHub\beachVacation\Beach Vacation\Assets\FMOD Stuff\Audio\Build\Desktop\Master
     Bank.bank
-  lastModified: 636608739200895996
+  lastModified: 636609039671232903
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 5440992
+    Value: 6296448
   Exists: 1
 --- !u!114 &114387664136717650
 MonoBehaviour:
@@ -1886,6 +1977,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 720
   Exists: 1
+--- !u!114 &114439847057450168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isNight
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114441299008810556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2145,6 +2251,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 600
+--- !u!114 &114503518477949364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Rock Hit
+  guid: 69fee76d466c8745831fee696868327b
+  Banks:
+  - {fileID: 114375376468641490}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 850
 --- !u!114 &114504835964581372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2676,6 +2804,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: isDay
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114617703797827934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isNight
   Min: 0
   Max: 1
   Default: 0

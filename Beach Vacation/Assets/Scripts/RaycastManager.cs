@@ -45,6 +45,8 @@ public class RaycastManager : MonoBehaviour
     private Transform treeTransform;
     public Vector3 treeVector;
     public Vector3 creatureVector;
+    public bool llama;
+    public bool rock;
 
     void Start()
     {
@@ -126,11 +128,16 @@ public class RaycastManager : MonoBehaviour
                 creatureVector = new Vector3 (creatureTransform.position.x, creatureTransform.position.y, creatureTransform.position.z);
                 //armAnim = GameObject.Find("Swing2").GetComponent<RightArm>();
                 //Debug.Log(theArmAnimation.hasSwung);
+
+                llama = GameObject.Find(hit.collider.gameObject.name).GetComponent<CreatureController>().isLlama;
+                rock = GameObject.Find(hit.collider.gameObject.name).GetComponent<CreatureController>().isRock;
+
                 if (hasSwung)
                 {
                     // Debug.Log("yayayayay i swung");
                     creatureController.creatureHealth -= 1;
 
+                    
                     //FMODUnity.RuntimeManager.PlayOneShot(hitSound);
                     //FMODUnity.RuntimeManager.PlayOneShot(hurtSound, creatureVector);
 
