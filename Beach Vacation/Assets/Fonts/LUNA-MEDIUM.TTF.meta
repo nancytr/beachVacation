@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: cac6fb7c6a53f9b4a9b6b46163323272
+timeCreated: 1525333989
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Luna
+  fontNames:
+  - Luna
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b3934d0607af00c4388d6972cc344e43, type: 3}
+  - {fileID: 12800000, guid: 9c922899577b642478711760fad9dd33, type: 3}
+  - {fileID: 12800000, guid: 4c16a47c3a7645744b2baa415f34ce28, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
