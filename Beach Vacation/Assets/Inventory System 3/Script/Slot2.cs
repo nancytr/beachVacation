@@ -94,7 +94,7 @@ public class Slot2 : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 
 		public void OnPointerEnter(PointerEventData eventData)
 		{
-			// print(item.name + " haha");
+			print(item.name + " haha");
 		}
 
 }
