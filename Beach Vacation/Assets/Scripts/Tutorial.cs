@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour {
 
-    private bool tutorialActive = true;
+    private bool tutorialActive = false;
 
 
 	void Start () 
