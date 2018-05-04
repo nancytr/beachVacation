@@ -31,6 +31,16 @@ public class TimeController : MonoBehaviour {
     {
         UpdateSun();
 
+
+        if (isNight)
+        {
+            timeMultiplier = 1.5f;
+        }
+        if (!isNight)
+        {
+            timeMultiplier = 1f;
+        }
+
         currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
 
         // When day ends, restart day
