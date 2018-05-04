@@ -6,7 +6,7 @@ public class NightDamage : MonoBehaviour {
 
     [SerializeField] private TimeController timeController;
     [SerializeField] private Player playerVitals;
-    [SerializeField] private LightSafety lightSafety;
+    //[SerializeField] private LightSafety lightSafety;
 
     [FMODUnity.EventRef]
     public string nightHurt;
@@ -21,15 +21,18 @@ public class NightDamage : MonoBehaviour {
 
     void IncrementalDamage()
     {
-
+        LightSafety temp;
+        temp = FindObjectOfType<LightSafety>();
         // if its nighttime, if player is not near fire and if player is not dead:
-        if (timeController.isNight && !lightSafety.nearFire && !playerVitals.isDead)
+        //lightSafety = gameObject.GetComponent<LightSafety>();
+        if (timeController.isNight && !temp.nearFire && !playerVitals.isDead)
         {
+            
             //Debug.Log(!lightSafety.nearFire);
             playerVitals.healthSlider.value -= 20f;
             FMODUnity.RuntimeManager.PlayOneShot(nightHurt);
             print("i am near a fire?");
-            print(lightSafety.nearFire);
+            print(temp.nearFire);
         }
     }
 
